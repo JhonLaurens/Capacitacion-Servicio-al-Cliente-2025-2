@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="COLTEFINANCIERA_SAC_2025_2" version="1.0" 
+          xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" 
+          xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd 
+                              http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+    <lom xmlns="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1">
+      <general>
+        <identifier>
+          <catalog>URI</catalog>
+          <entry>COLTEFINANCIERA_SAC_2025_2</entry>
+        </identifier>
+        <title>
+          <langstring xml:lang="es">Capacitación Servicio al Cliente - Segundo Semestre 2025</langstring>
+        </title>
+        <language>es</language>
+        <description>
+          <langstring xml:lang="es">Capacitación virtual informativa sobre servicio al cliente para Coltefinanciera, consolidada en 10 módulos temáticos según recomendaciones de Auditoría Interna. Incluye nueva tipología PETICIONES, procedimiento PR-M4-P2-01, sistema INTERCAPTA, análisis de causa raíz obligatorio, marco normativo vigente, sistema SAC y herramientas de supervisión.</langstring>
+        </description>
+        <keyword>
+          <langstring xml:lang="es">servicio al cliente</langstring>
+        </keyword>
+        <keyword>
+          <langstring xml:lang="es">Coltefinanciera</langstring>
+        </keyword>
+        <keyword>
+          <langstring xml:lang="es">INTERCAPTA</langstring>
+        </keyword>
+        <keyword>
+          <langstring xml:lang="es">auditoría interna</langstring>
+        </keyword>
+        <keyword>
+          <langstring xml:lang="es">SCORM</langstring>
+        </keyword>
+      </general>
+      <lifecycle>
+        <version>
+          <langstring xml:lang="es">2.0</langstring>
+        </version>
+        <status>
+          <source>
+            <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+            <langstring xml:lang="x-none">Final</langstring>
+          </value>
+        </status>
+        <contribute>
+          <role>
+            <source>
+              <langstring xml:lang="x-none">LOMv1.0</langstring>
+            </source>
+            <value>
+              <langstring xml:lang="x-none">Author</langstring>
+            </value>
+          </role>
+          <entity>Coltefinanciera - Departamento de Capacitación</entity>
+          <date>
+            <datetime>2025-01-11</datetime>
+          </date>
+        </contribute>
+      </lifecycle>
+      <technical>
+        <format>text/html</format>
+        <size>2048000</size>
+        <location>index.html</location>
+        <requirement>
+          <orcomposite>
+            <type>
+              <source>
+                <langstring xml:lang="x-none">LOMv1.0</langstring>
+              </source>
+              <value>
+                <langstring xml:lang="x-none">Browser</langstring>
+              </value>
+            </type>
+            <name>
+              <source>
+                <langstring xml:lang="x-none">LOMv1.0</langstring>
+              </source>
+              <value>
+                <langstring xml:lang="x-none">Any</langstring>
+              </value>
+            </name>
+          </orcomposite>
+        </requirement>
+      </technical>
+      <educational>
+        <interactivitytype>
+          <source>
+            <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+            <langstring xml:lang="x-none">Mixed</langstring>
+          </value>
+        </interactivitytype>
+        <learningresourcetype>
+          <source>
+            <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+            <langstring xml:lang="x-none">Exercise</langstring>
+          </value>
+        </learningresourcetype>
+        <interactivitylevel>
+          <source>
+            <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+            <langstring xml:lang="x-none">High</langstring>
+          </value>
+        </interactivitylevel>
+        <intendedenduserrole>
+          <source>
+            <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+            <langstring xml:lang="x-none">Learner</langstring>
+          </value>
+        </intendedenduserrole>
+        <context>
+          <source>
+            <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+            <langstring xml:lang="x-none">Training</langstring>
+          </value>
+        </context>
+        <typicalagerange>
+          <langstring xml:lang="es">18-65</langstring>
+        </typicalagerange>
+        <difficulty>
+          <source>
+            <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+            <langstring xml:lang="x-none">Medium</langstring>
+          </value>
+        </difficulty>
+        <typicallearningtime>
+          <datetime>PT30M</datetime>
+        </typicallearningtime>
+        <description>
+          <langstring xml:lang="es">Capacitación informativa estructurada en 10 módulos temáticos. Los participantes deben revisar todos los módulos para completar la capacitación y obtener certificación de finalización.</langstring>
+        </description>
+        <language>es</language>
+      </educational>
+      <rights>
+        <cost>
+          <source>
+            <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+            <langstring xml:lang="x-none">No</langstring>
+          </value>
+        </cost>
+        <copyrightandotherrestrictions>
+          <source>
+            <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+            <langstring xml:lang="x-none">Yes</langstring>
+          </value>
+        </copyrightandotherrestrictions>
+        <description>
+          <langstring xml:lang="es">© 2025 Coltefinanciera. Todos los derechos reservados. Material de uso interno exclusivo.</langstring>
+        </description>
+      </rights>
+    </lom>
+  </metadata>
+  
+  <organizations default="COLTEFINANCIERA_ORG">
+    <organization identifier="COLTEFINANCIERA_ORG">
+      <title>Capacitación Servicio al Cliente - Segundo Semestre 2025</title>
+      <item identifier="ITEM_001" identifierref="RESOURCE_001">
+        <title>Transformando Vidas a Través del Servicio - 10 Módulos Informativos</title>
+        <adlcp:masteryscore>100</adlcp:masteryscore>
+      </item>
+    </organization>
+  </organizations>
+  
+  <resources>
+    <resource identifier="RESOURCE_001" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html"/>
+      <file href="style.css"/>
+      <file href="app.js"/>
+      <file href="scorm-api.js"/>
+      <dependency identifierref="COMMON_FILES"/>
+    </resource>
+    
+    <resource identifier="COMMON_FILES" type="webcontent" adlcp:scormtype="asset">
+      <file href="style.css"/>
+      <file href="app.js"/>
+      <file href="scorm-api.js"/>
+    </resource>
+  </resources>
+  
+</manifest>
