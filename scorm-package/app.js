@@ -919,10 +919,150 @@ class PresentationApp {
     }
 }
 
+// Clase para manejar el carrusel
+class Carousel {
+    constructor(container) {
+        this.container = container;
+        this.slides = container.querySelector('.carousel-slides');
+        this.slideElements = container.querySelectorAll('.carousel-slide');
+        this.prevBtn = container.querySelector('.carousel-btn-prev');
+        this.nextBtn = container.querySelector('.carousel-btn-next');
+        this.indicators = container.querySelectorAll('.indicator');
+        this.currentSlide = 0;
+        this.totalSlides = this.slideElements.length;
+        
+        this.init();
+    }
+    
+    init() {
+        this.bindEvents();
+        this.updateCarousel();
+    }
+    
+    bindEvents() {
+        this.prevBtn.addEventListener('click', () => this.prevSlide());
+        this.nextBtn.addEventListener('click', () => this.nextSlide());
+        
+        this.indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => this.goToSlide(index));
+        });
+    }
+    
+    prevSlide() {
+        this.currentSlide = this.currentSlide === 0 ? this.totalSlides - 1 : this.currentSlide - 1;
+        this.updateCarousel();
+    }
+    
+    nextSlide() {
+        this.currentSlide = this.currentSlide === this.totalSlides - 1 ? 0 : this.currentSlide + 1;
+        this.updateCarousel();
+    }
+    
+    goToSlide(index) {
+        this.currentSlide = index;
+        this.updateCarousel();
+    }
+    
+    updateCarousel() {
+        const translateX = -this.currentSlide * 100;
+        this.slides.style.transform = `translateX(${translateX}%)`;
+        
+        // Actualizar indicadores
+        this.indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === this.currentSlide);
+        });
+    }
+}
+
 // Initialize the application when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     window.presentationApp = new PresentationApp();
+    
+    // Inicializar carrusel
+    const carouselContainer = document.querySelector('.carousel-container');
+    if (carouselContainer) {
+        new Carousel(carouselContainer);
+    }
+    
+    // Initialize image modal
+    const imageModal = new ImageModal();
 });
+
+// Image Modal Class
+class ImageModal {
+    constructor() {
+        this.modal = document.getElementById('imageModal');
+        this.modalImage = document.getElementById('modalImage');
+        this.modalTitle = document.getElementById('modalTitle');
+        this.modalText = document.getElementById('modalText');
+        this.modalClose = document.getElementById('modalClose');
+        this.modalOverlay = this.modal.querySelector('.modal-overlay');
+        
+        this.bindEvents();
+    }
+    
+    bindEvents() {
+        // Add click event to all fraud images
+        const fraudImages = document.querySelectorAll('.fraud-image img');
+        fraudImages.forEach(img => {
+            img.addEventListener('click', (e) => {
+                this.openModal(e.target);
+            });
+        });
+        
+        // Close modal events
+        this.modalClose.addEventListener('click', () => {
+            this.closeModal();
+        });
+        
+        this.modalOverlay.addEventListener('click', () => {
+            this.closeModal();
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && this.modal.classList.contains('show')) {
+                this.closeModal();
+            }
+        });
+    }
+    
+    openModal(imgElement) {
+        // Get image source and alt text
+        const imgSrc = imgElement.src;
+        const imgAlt = imgElement.alt;
+        
+        // Get the fraud card content
+        const fraudCard = imgElement.closest('.fraud-card');
+        const title = fraudCard.querySelector('h5').textContent;
+        const description = fraudCard.querySelector('p').textContent;
+        
+        // Set modal content
+        this.modalImage.src = imgSrc;
+        this.modalImage.alt = imgAlt;
+        this.modalTitle.textContent = title;
+        this.modalText.textContent = description;
+        
+        // Show modal with animation
+        this.modal.style.display = 'flex';
+        setTimeout(() => {
+            this.modal.classList.add('show');
+        }, 10);
+        
+        // Prevent body scroll
+        document.body.style.overflow = 'hidden';
+    }
+    
+    closeModal() {
+        this.modal.classList.remove('show');
+        
+        setTimeout(() => {
+            this.modal.style.display = 'none';
+            // Restore body scroll
+            document.body.style.overflow = '';
+        }, 300);
+    }
+}
 
 // Export for use in modules
 if (typeof module !== 'undefined' && module.exports) {
