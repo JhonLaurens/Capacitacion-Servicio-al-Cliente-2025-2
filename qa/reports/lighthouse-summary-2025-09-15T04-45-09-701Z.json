@@ -1,0 +1,18 @@
+{
+  "target": "http://localhost:8080/index.html",
+  "scores": {
+    "performance": 74,
+    "accessibility": 95,
+    "bestPractices": 100,
+    "seo": 100
+  },
+  "thresholds": {
+    "performance": 80,
+    "accessibility": 90,
+    "bestPractices": 90,
+    "seo": 80
+  },
+  "passed": false,
+  "htmlPath": "C:\\repos\\Capacitacion_Sac_2025_2\\qa\\reports\\lighthouse-2025-09-15T04-45-09-701Z.html",
+  "jsonPath": "C:\\repos\\Capacitacion_Sac_2025_2\\qa\\reports\\lighthouse-2025-09-15T04-45-09-701Z.json"
+}

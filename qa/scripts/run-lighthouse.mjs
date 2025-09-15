@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // @ts-nocheck
-import chromeLauncher from "chrome-launcher";
+import * as chromeLauncher from "chrome-launcher";
 import fs from "fs-extra";
 import lighthouse from "lighthouse";
 import path from "path";
@@ -10,7 +10,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const URL_TO_TEST = process.env.LH_URL || "http://localhost:8080/index.html";
-const REPORT_DIR = process.env.QA_REPORT_DIR || path.resolve("qa", "reports");
+const REPORT_DIR =
+  process.env.QA_REPORT_DIR || path.resolve(__dirname, "..", "reports");
 
 const PERF_MIN = Number(process.env.LH_MIN_PERF || 80);
 const A11Y_MIN = Number(process.env.LH_MIN_A11Y || 90);

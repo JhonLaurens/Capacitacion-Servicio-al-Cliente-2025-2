@@ -8,7 +8,8 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const REPORT_DIR = process.env.QA_REPORT_DIR || path.resolve("qa", "reports");
+const REPORT_DIR =
+  process.env.QA_REPORT_DIR || path.resolve(__dirname, "..", "reports");
 const CI_MODE = process.argv.includes("--ci");
 const ROOT_DIR = path.resolve(__dirname, "..", "..");
 const COMPOSE_FILE =

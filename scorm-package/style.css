@@ -245,11 +245,11 @@
 
 /* Data attribute for manual theme switching */
 [data-color-scheme="dark"] {
-  /* RGB versions for opacity control (dark mode) */
-  --color-gray-400-rgb: 119, 124, 124;
-  --color-teal-300-rgb: 50, 184, 198;
-  --color-gray-300-rgb: 167, 169, 169;
-  --color-gray-200-rgb: 245, 245, 245;
+  /* RGB versions for opacity control (dark mode) - Mejorado */
+  --color-gray-400-rgb: 180, 185, 190; /* Gris más claro para mejor contraste */
+  --color-teal-300-rgb: 80, 220, 240; /* Teal más brillante */
+  --color-gray-300-rgb: 220, 225, 230; /* Gris claro más visible */
+  --color-gray-200-rgb: 240, 245, 250; /* Gris muy claro para texto */
 
   /* Colorful background palette - Dark Mode */
   --color-bg-1: rgba(29, 78, 216, 0.15); /* Dark blue */
@@ -261,30 +261,30 @@
   --color-bg-7: rgba(190, 24, 93, 0.15); /* Dark pink */
   --color-bg-8: rgba(8, 145, 178, 0.15); /* Dark cyan */
 
-  /* Semantic Color Tokens (Dark Mode) */
-  --color-background: var(--color-charcoal-700);
-  --color-surface: var(--color-charcoal-800);
-  --color-text: var(--color-gray-200);
-  --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
-  --color-primary: var(--color-teal-300);
-  --color-primary-hover: var(--color-teal-400);
-  --color-primary-active: var(--color-teal-800);
-  --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
-  --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
-  --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
-  --color-border: rgba(var(--color-gray-400-rgb), 0.3);
-  --color-error: var(--color-red-400);
-  --color-success: var(--color-teal-300);
-  --color-warning: var(--color-orange-400);
-  --color-info: var(--color-gray-300);
-  --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
-  --color-btn-primary-text: var(--color-slate-900);
-  --color-card-border: rgba(var(--color-gray-400-rgb), 0.15);
-  --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
+  /* Semantic Color Tokens (Dark Mode) - Mejorado */
+  --color-background: #1a1a1a; /* Fondo más oscuro para mejor contraste */
+  --color-surface: #2a2a2a; /* Surface más claro que background */
+  --color-text: #f5f5f5; /* Texto blanco casi puro */
+  --color-text-secondary: #d0d0d0; /* Texto secundario más claro */
+  --color-primary: #50d4f0; /* Teal brillante para botones */
+  --color-primary-hover: #70e4ff; /* Teal aún más brillante en hover */
+  --color-primary-active: #30c4e0; /* Teal más oscuro para activo */
+  --color-secondary: rgba(180, 185, 190, 0.2); /* Gris más visible */
+  --color-secondary-hover: rgba(180, 185, 190, 0.3);
+  --color-secondary-active: rgba(180, 185, 190, 0.4);
+  --color-border: rgba(180, 185, 190, 0.4); /* Bordes más visibles */
+  --color-error: #ff6b6b; /* Rojo más brillante */
+  --color-success: #51cf66; /* Verde más brillante */
+  --color-warning: #ffd43b; /* Amarillo más brillante */
+  --color-info: #74c0fc; /* Azul claro más brillante */
+  --color-focus-ring: rgba(80, 220, 240, 0.6);
+  --color-btn-primary-text: #1a1a1a; /* Texto negro para botones claros */
+  --color-card-border: rgba(180, 185, 190, 0.3);
+  --color-card-border-inner: rgba(180, 185, 190, 0.2);
   --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1),
     inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-  --color-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
-  --color-select-caret: rgba(var(--color-gray-200-rgb), 0.8);
+  --color-border-secondary: rgba(180, 185, 190, 0.3);
+  --color-select-caret: rgba(240, 245, 250, 0.9);
 
   /* Common style patterns - updated for dark mode */
   --focus-ring: 0 0 0 3px var(--color-focus-ring);
@@ -295,64 +295,48 @@
   --select-caret-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f5f5f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
 
   /* RGB versions for dark mode */
-  --color-success-rgb: var(--color-teal-300-rgb);
-  --color-error-rgb: var(--color-red-400-rgb);
-  --color-warning-rgb: var(--color-orange-400-rgb);
-  --color-info-rgb: var(--color-gray-300-rgb);
+  --color-success-rgb: 81, 207, 102;
+  --color-error-rgb: 255, 107, 107;
+  --color-warning-rgb: 255, 212, 59;
+  --color-info-rgb: 116, 192, 252;
 }
 
 [data-color-scheme="light"] {
   /* RGB versions for opacity control (light mode) */
-  --color-coltefinanciera-blue-rgb: 0, 56, 168; /* Azul oscuro para tema claro */
-  --color-coltefinanciera-light-blue-rgb: 51, 153, 255; /* Azul claro para tema claro */
+  --color-coltefinanciera-blue-rgb: 0, 51, 102; /* Azul corporativo más oscuro */
+  --color-coltefinanciera-light-blue-rgb: 30, 90, 150; /* Azul medio más intenso */
   --color-white-rgb: 255, 255, 255;
-  --color-gray-light-rgb: 233, 236, 239; /* Gris claro para tema claro */
+  --color-gray-light-rgb: 200, 205, 210; /* Gris más contrastante */
+  --color-text-rgb: 20, 30, 40; /* Texto más oscuro */
 
-  /* Semantic Color Tokens (Light Mode) */
+  /* Semantic Color Tokens (Light Mode) - Mejorado para contraste */
   --color-background: var(--color-white);
   --color-surface: var(--color-white);
-  --color-text: var(
-    --color-coltefinanciera-blue-dark
-  ); /* Mejorado para contraste */
-  --color-text-secondary: rgba(
-    var(--color-coltefinanciera-blue-rgb),
-    0.85
-  ); /* Mejorado para contraste */
-  --color-primary: rgba(
-    var(--color-coltefinanciera-blue-rgb),
-    1
-  ); /* Azul oscuro (0, 56, 168) */
-  --color-primary-hover: rgba(
-    var(--color-coltefinanciera-light-blue-rgb),
-    1
-  ); /* Azul claro (51, 153, 255) */
-  --color-primary-active: rgba(var(--color-coltefinanciera-blue-rgb), 0.9);
-  --color-secondary: rgba(
-    var(--color-gray-light-rgb),
-    0.7
-  ); /* Mejorado para contraste */
-  --color-secondary-hover: rgba(var(--color-gray-light-rgb), 0.8);
-  --color-secondary-active: rgba(var(--color-gray-light-rgb), 0.9);
-  --color-border: rgba(var(--color-gray-light-rgb), 1);
-  --color-btn-primary-text: var(--color-white);
-  --color-card-border: rgba(var(--color-gray-light-rgb), 0.8);
-  --color-card-border-inner: rgba(var(--color-gray-light-rgb), 0.5);
-  --color-error: var(--color-red-500);
-  --color-success: var(--color-coltefinanciera-green);
-  --color-warning: var(--color-orange-500);
-  --color-info: rgba(
-    var(--color-coltefinanciera-blue-rgb),
-    0.85
-  ); /* Mejorado para contraste */
-  --color-focus-ring: rgba(var(--color-coltefinanciera-light-blue-rgb), 0.4);
-  --color-accent: rgba(var(--color-coltefinanciera-light-blue-rgb), 1);
-  --color-accent-hover: rgba(var(--color-coltefinanciera-blue-rgb), 1);
+  --color-text: #1a1a1a; /* Negro casi puro para máximo contraste */
+  --color-text-secondary: #333333; /* Gris muy oscuro para buen contraste */
+  --color-primary: #003366; /* Azul corporativo oscuro */
+  --color-primary-hover: #0066cc; /* Azul hover más intenso */
+  --color-primary-active: #002244; /* Azul activo más oscuro */
+  --color-secondary: rgba(200, 205, 210, 0.7); /* Gris claro más visible */
+  --color-secondary-hover: rgba(200, 205, 210, 0.9);
+  --color-secondary-active: rgba(180, 185, 190, 1);
+  --color-border: rgba(180, 185, 190, 1); /* Bordes más visibles */
+  --color-btn-primary-text: #ffffff;
+  --color-card-border: rgba(160, 165, 170, 0.8);
+  --color-card-border-inner: rgba(180, 185, 190, 0.6);
+  --color-error: #c8102e; /* Rojo más intenso */
+  --color-success: #228b22; /* Verde más intenso */
+  --color-warning: #ff8c00; /* Naranja más intenso */
+  --color-info: #003366; /* Azul corporativo para info */
+  --color-focus-ring: rgba(30, 90, 150, 0.5);
+  --color-accent: #0066cc;
+  --color-accent-hover: #003366;
 
   /* RGB versions for light mode */
-  --color-success-rgb: var(--color-coltefinanciera-green-rgb);
-  --color-error-rgb: var(--color-red-500-rgb);
-  --color-warning-rgb: var(--color-orange-500-rgb);
-  --color-info-rgb: var(--color-coltefinanciera-blue-rgb);
+  --color-success-rgb: 34, 139, 34;
+  --color-error-rgb: 200, 16, 46;
+  --color-warning-rgb: 255, 140, 0;
+  --color-info-rgb: 0, 51, 102;
 }
 
 /* Base styles */
@@ -432,29 +416,32 @@ p:last-child {
 }
 
 .theme-toggle {
-  background: transparent;
-  border: 2px solid var(--color-border);
+  background: var(--color-surface);
+  border: 3px solid var(--color-primary);
   border-radius: var(--radius-full);
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: var(--color-text);
+  color: var(--color-primary);
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .theme-toggle:hover {
-  background-color: rgba(var(--color-primary-rgb), 0.1);
-  transform: scale(1.05);
+  background: var(--color-primary);
+  color: var(--color-surface);
+  transform: scale(1.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
 
 .theme-toggle:focus {
-  outline: none;
-  box-shadow: var(--focus-ring);
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 3px;
 }
 
 .theme-toggle-icon {
@@ -490,32 +477,67 @@ p:last-child {
     border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.text-secondary {
-  color: var(--color-coltefinanciera-blue);
-  font-size: var(--font-size-sm);
-  opacity: 0.8;
+/* Typography - Mejorado con mejor contraste */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text);
+  letter-spacing: var(--letter-spacing-tight);
 }
+
+h1 {
+  font-size: var(--font-size-4xl);
+  color: var(--color-text);
+}
+
 h2 {
   font-size: var(--font-size-3xl);
+  color: var(--color-text);
+  font-weight: var(--font-weight-bold);
 }
+
 h3 {
   font-size: var(--font-size-2xl);
+  color: var(--color-text);
+  font-weight: var(--font-weight-bold);
 }
+
 h4 {
   font-size: var(--font-size-xl);
-  color: var(--color-coltefinanciera-blue);
+  color: var(--color-text);
+  font-weight: var(--font-weight-semibold);
 }
+
 h5 {
   font-size: var(--font-size-lg);
-  color: var(--color-coltefinanciera-blue);
+  color: var(--color-text);
+  font-weight: var(--font-weight-semibold);
 }
+
 h6 {
   font-size: var(--font-size-md);
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
 }
 
 p {
   margin: 0 0 var(--space-16) 0;
-  color: var(--color-white);
+  color: var(--color-text);
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-normal);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
 }
 
 a {
@@ -552,65 +574,84 @@ pre code {
   padding: 0;
 }
 
-/* Buttons */
+/* Buttons - Mejorado con mayor contraste */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-8) var(--space-16);
+  padding: var(--space-12) var(--space-20);
   border-radius: var(--radius-base);
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-semibold);
   line-height: 1.5;
   cursor: pointer;
   transition: all var(--duration-normal) var(--ease-standard);
   border: none;
   text-decoration: none;
   position: relative;
+  min-height: 44px; /* Mejorar accesibilidad táctil */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .btn:focus-visible {
-  outline: none;
-  box-shadow: var(--focus-ring);
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .btn--primary {
   background: var(--color-coltefinanciera-blue);
-  color: var(--color-btn-primary-text);
+  color: #ffffff;
+  border: 2px solid var(--color-coltefinanciera-blue);
+  font-weight: var(--font-weight-bold);
 }
 
 .btn--primary:hover {
   background: var(--color-coltefinanciera-gold);
-  color: var(--color-black);
+  color: #000000;
+  border-color: var(--color-coltefinanciera-gold);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
 }
 
 .btn--primary:active {
   background: var(--color-coltefinanciera-blue);
-  opacity: 0.9;
+  color: #ffffff;
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .btn--secondary {
-  background: var(--color-secondary);
+  background: var(--color-surface);
   color: var(--color-text);
+  border: 2px solid var(--color-border);
+  font-weight: var(--font-weight-semibold);
 }
 
 .btn--secondary:hover {
   background: var(--color-secondary-hover);
+  border-color: var(--color-primary);
+  transform: translateY(-1px);
 }
 
 .btn--secondary:active {
   background: var(--color-secondary-active);
+  transform: translateY(0);
 }
 
 .btn--outline {
   background: transparent;
-  border: 2px solid var(--color-coltefinanciera-blue);
+  border: 3px solid var(--color-coltefinanciera-blue);
   color: var(--color-coltefinanciera-blue);
+  font-weight: var(--font-weight-bold);
+  min-width: 120px;
 }
 
 .btn--outline:hover {
   background: var(--color-coltefinanciera-blue);
-  color: var(--color-white);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.3);
 }
 
 .btn--sm {
@@ -971,61 +1012,84 @@ select.form-control {
   justify-content: space-between;
   padding: var(--space-16) var(--space-32);
   background: var(--color-surface);
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 2px solid var(--color-border);
   position: relative;
   z-index: 90;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .nav-controls {
   display: flex;
   align-items: center;
-  gap: var(--space-16);
+  gap: var(--space-20);
 }
 
 .slide-nav {
   display: flex;
-  gap: var(--space-8);
+  gap: var(--space-10);
 }
 
 .slide-btn {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: var(--radius-full);
-  border: 2px solid var(--color-coltefinanciera-blue);
+  border: 3px solid var(--color-coltefinanciera-blue);
   background: var(--color-surface);
   color: var(--color-coltefinanciera-blue);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
   cursor: pointer;
   transition: all var(--duration-normal) var(--ease-standard);
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .slide-btn:hover {
   background: var(--color-coltefinanciera-blue);
-  color: var(--color-white);
+  color: #ffffff;
   border-color: var(--color-coltefinanciera-blue);
-  transform: scale(1.05);
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.3);
+  z-index: 10;
 }
 
 .slide-btn.active {
   background: var(--color-coltefinanciera-gold);
-  color: var(--color-black);
+  color: #000000;
   border-color: var(--color-coltefinanciera-gold);
-  transform: scale(1.1);
+  transform: scale(1.15);
+  font-weight: var(--font-weight-bold);
+  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.4);
+  z-index: 10;
+}
+
+.slide-btn:focus-visible {
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 3px;
 }
 
 .progress-info {
   display: flex;
-  gap: var(--space-20);
-  font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
+  gap: var(--space-24);
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+}
+
+#currentSlide {
+  color: var(--color-text);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
 }
 
 #timer {
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-bold);
   color: var(--color-coltefinanciera-gold);
+  font-size: var(--font-size-lg);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Progress Bar */

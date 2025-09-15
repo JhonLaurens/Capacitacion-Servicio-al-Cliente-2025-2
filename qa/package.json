@@ -9,15 +9,16 @@
     "lighthouse": "node ./scripts/run-lighthouse.mjs",
     "scormcloud": "node ./scripts/run-scormcloud.mjs",
     "orchestrate": "node ./scripts/orchestrate.mjs",
-    "ci": "node ./scripts/orchestrate.mjs --ci"
+    "ci": "node ./scripts/orchestrate.mjs --ci",
+    "cleanup": "node ./scripts/cleanup.mjs"
   },
   "dependencies": {
-    "chrome-launcher": "^1.0.0",
-    "lighthouse": "^11.7.0",
     "archiver": "^7.0.1",
     "axios": "^1.7.7",
+    "chrome-launcher": "^1.0.0",
     "form-data": "^4.0.0",
     "fs-extra": "^11.2.0",
+    "lighthouse": "^12.8.2",
     "yargs": "^17.7.2"
   }
 }

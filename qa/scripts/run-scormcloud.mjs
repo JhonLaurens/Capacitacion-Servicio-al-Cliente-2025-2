@@ -1,9 +1,14 @@
 #!/usr/bin/env node
+// @ts-nocheck
 import archiver from "archiver";
 import axios from "axios";
 import FormData from "form-data";
 import fs from "fs-extra";
 import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Env vars
 const API_BASE =
@@ -13,9 +18,11 @@ const SECRET_KEY = process.env.SCORMCLOUD_SECRET; // required
 const ORG_ID = process.env.SCORMCLOUD_ORG || "default";
 const COURSE_ID = process.env.SCORMCLOUD_COURSE_ID || `colte-${Date.now()}`;
 const VERSION_TAG = process.env.SCORMCLOUD_VERSION || new Date().toISOString();
-const REPORT_DIR = process.env.QA_REPORT_DIR || path.resolve("qa", "reports");
+const REPORT_DIR =
+  process.env.QA_REPORT_DIR || path.resolve(__dirname, "..", "reports");
 const PACKAGE_DIR =
-  process.env.SCORM_PACKAGE_DIR || path.resolve("scorm-package");
+  process.env.SCORM_PACKAGE_DIR ||
+  path.resolve(__dirname, "..", "..", "scorm-package");
 const PACKAGE_ZIP = path.resolve("Coltefinanciera-SAC-2025-2.zip");
 
 // Thresholds (SCORM level)
