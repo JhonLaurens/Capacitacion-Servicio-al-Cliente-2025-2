@@ -1,0 +1,36 @@
+{
+  "name": "capacitacion-servicio-cliente-coltefinanciera-2025-2",
+  "version": "1.0.0",
+  "description": "Capacitación en Servicio al Cliente - Segundo Semestre 2025 - Formato SCORM",
+  "main": "scorm-package/index.html",
+  "scripts": {
+    "start": "node scorm-package/server.js",
+    "dev": "node scorm-package/server.js",
+    "build": "echo 'Static build - no build step required'",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "scorm",
+    "elearning",
+    "capacitacion",
+    "servicio-cliente",
+    "coltefinanciera"
+  ],
+  "author": "Coltefinanciera",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JhonLaurens/Capacitacion-Servicio-al-Cliente-2025-2.git"
+  },
+  "homepage": "https://github.com/JhonLaurens/Capacitacion-Servicio-al-Cliente-2025-2#readme"
+}
