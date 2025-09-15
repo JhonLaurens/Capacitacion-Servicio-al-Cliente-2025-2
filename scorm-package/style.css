@@ -21,6 +21,11 @@
   --color-coltefinanciera-green: rgba(34, 139, 34, 1);
   --color-coltefinanciera-light-green: rgba(144, 238, 144, 1);
   
+  /* Nuevos colores para tema claro */
+  --color-coltefinanciera-blue-dark: rgba(0, 56, 168, 1);
+  --color-coltefinanciera-light-blue-new: rgba(51, 153, 255, 1);
+  --color-gray-light: rgba(233, 236, 239, 1);
+  
   --color-teal-300: rgba(50, 184, 198, 1);
   --color-teal-400: rgba(45, 166, 178, 1);
   --color-teal-500: rgba(33, 128, 141, 1);
@@ -114,7 +119,7 @@
   --line-height-normal: 1.5;
   --letter-spacing-tight: -0.01em;
 
-  /* Spacing */
+  /* Spacing - Sistema de espaciado profesional */
   --space-0: 0;
   --space-1: 1px;
   --space-2: 2px;
@@ -127,6 +132,26 @@
   --space-20: 20px;
   --space-24: 24px;
   --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-56: 56px;
+  --space-64: 64px;
+  --space-80: 80px;
+  --space-96: 96px;
+  
+  /* Espaciado semántico para contenido */
+  --content-spacing-xs: var(--space-8);
+  --content-spacing-sm: var(--space-16);
+  --content-spacing-md: var(--space-24);
+  --content-spacing-lg: var(--space-32);
+  --content-spacing-xl: var(--space-48);
+  --content-spacing-2xl: var(--space-64);
+  
+  /* Espaciado para elementos de texto */
+  --text-spacing-tight: var(--space-8);
+  --text-spacing-normal: var(--space-16);
+  --text-spacing-relaxed: var(--space-24);
+  --text-spacing-loose: var(--space-32);
 
   /* Border Radius */
   --radius-sm: 6px;
@@ -278,36 +303,39 @@
 
 [data-color-scheme="light"] {
   /* RGB versions for opacity control (light mode) */
-  --color-brown-600-rgb: 94, 82, 64;
-  --color-teal-500-rgb: 33, 128, 141;
-  --color-slate-900-rgb: 19, 52, 59;
+  --color-coltefinanciera-blue-rgb: 0, 56, 168; /* Azul oscuro para tema claro */
+  --color-coltefinanciera-light-blue-rgb: 51, 153, 255; /* Azul claro para tema claro */
+  --color-white-rgb: 255, 255, 255;
+  --color-gray-light-rgb: 233, 236, 239; /* Gris claro para tema claro */
 
   /* Semantic Color Tokens (Light Mode) */
-  --color-background: var(--color-cream-50);
-  --color-surface: var(--color-cream-100);
-  --color-text: var(--color-slate-900);
-  --color-text-secondary: var(--color-slate-500);
-  --color-primary: var(--color-teal-500);
-  --color-primary-hover: var(--color-teal-600);
-  --color-primary-active: var(--color-teal-700);
-  --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
-  --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
-  --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
-  --color-border: rgba(var(--color-brown-600-rgb), 0.2);
-  --color-btn-primary-text: var(--color-cream-50);
-  --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
-  --color-card-border-inner: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-background: var(--color-white);
+  --color-surface: var(--color-white);
+  --color-text: var(--color-coltefinanciera-blue-dark); /* Mejorado para contraste */
+  --color-text-secondary: rgba(var(--color-coltefinanciera-blue-rgb), 0.85); /* Mejorado para contraste */
+  --color-primary: rgba(var(--color-coltefinanciera-blue-rgb), 1); /* Azul oscuro (0, 56, 168) */
+  --color-primary-hover: rgba(var(--color-coltefinanciera-light-blue-rgb), 1); /* Azul claro (51, 153, 255) */
+  --color-primary-active: rgba(var(--color-coltefinanciera-blue-rgb), 0.9);
+  --color-secondary: rgba(var(--color-gray-light-rgb), 0.7); /* Mejorado para contraste */
+  --color-secondary-hover: rgba(var(--color-gray-light-rgb), 0.8);
+  --color-secondary-active: rgba(var(--color-gray-light-rgb), 0.9);
+  --color-border: rgba(var(--color-gray-light-rgb), 1);
+  --color-btn-primary-text: var(--color-white);
+  --color-card-border: rgba(var(--color-gray-light-rgb), 0.8);
+  --color-card-border-inner: rgba(var(--color-gray-light-rgb), 0.5);
   --color-error: var(--color-red-500);
-  --color-success: var(--color-teal-500);
+  --color-success: var(--color-coltefinanciera-green);
   --color-warning: var(--color-orange-500);
-  --color-info: var(--color-slate-500);
-  --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
+  --color-info: rgba(var(--color-coltefinanciera-blue-rgb), 0.85); /* Mejorado para contraste */
+  --color-focus-ring: rgba(var(--color-coltefinanciera-light-blue-rgb), 0.4);
+  --color-accent: rgba(var(--color-coltefinanciera-light-blue-rgb), 1);
+  --color-accent-hover: rgba(var(--color-coltefinanciera-blue-rgb), 1);
 
   /* RGB versions for light mode */
-  --color-success-rgb: var(--color-teal-500-rgb);
+  --color-success-rgb: var(--color-coltefinanciera-green-rgb);
   --color-error-rgb: var(--color-red-500-rgb);
   --color-warning-rgb: var(--color-orange-500-rgb);
-  --color-info-rgb: var(--color-slate-500-rgb);
+  --color-info-rgb: var(--color-coltefinanciera-blue-rgb);
 }
 
 /* Base styles */
@@ -319,6 +347,7 @@ html {
   background-color: var(--color-background);
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 body {
@@ -340,6 +369,7 @@ h4,
 h5,
 h6 {
   margin: 0;
+  font-family: var(--font-family-base);
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-tight);
   color: var(--color-text);
@@ -349,6 +379,102 @@ h6 {
 h1 {
   font-size: var(--font-size-4xl);
 }
+
+/* Mejoras tipográficas para elementos p */
+p {
+  font-family: var(--font-family-base);
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+  margin-bottom: var(--text-spacing-normal);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* Jerarquía tipográfica mejorada */
+.text-large {
+  font-size: var(--font-size-xl);
+  line-height: 1.6;
+  font-weight: var(--font-weight-medium);
+}
+
+.text-emphasis {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-coltefinanciera-gold);
+}
+
+/* Estilos para el botón de alternancia de tema */
+.theme-toggle-container {
+  position: absolute;
+  top: var(--space-16);
+  right: var(--space-24);
+  z-index: 100;
+}
+
+.theme-toggle {
+  background: transparent;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-full);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-text);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(var(--color-primary-rgb), 0.1);
+  transform: scale(1.05);
+}
+
+.theme-toggle:focus {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.theme-toggle-icon {
+  position: absolute;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+.sun-icon {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.moon-icon {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-color-scheme="light"] .sun-icon {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-color-scheme="light"] .moon-icon {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+/* Transiciones para elementos que cambian con el tema */
+*, *::before, *::after {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text-secondary {
+  color: var(--color-coltefinanciera-blue);
+  font-size: var(--font-size-sm);
+  opacity: 0.8;
+}
 h2 {
   font-size: var(--font-size-3xl);
 }
@@ -357,9 +483,11 @@ h3 {
 }
 h4 {
   font-size: var(--font-size-xl);
+  color: var(--color-coltefinanciera-blue);
 }
 h5 {
   font-size: var(--font-size-lg);
+  color: var(--color-coltefinanciera-blue);
 }
 h6 {
   font-size: var(--font-size-md);
@@ -367,6 +495,7 @@ h6 {
 
 p {
   margin: 0 0 var(--space-16) 0;
+  color: var(--color-white);
 }
 
 a {
@@ -426,16 +555,18 @@ pre code {
 }
 
 .btn--primary {
-  background: var(--color-primary);
+  background: var(--color-coltefinanciera-blue);
   color: var(--color-btn-primary-text);
 }
 
 .btn--primary:hover {
-  background: var(--color-primary-hover);
+  background: var(--color-coltefinanciera-gold);
+  color: var(--color-black);
 }
 
 .btn--primary:active {
-  background: var(--color-primary-active);
+  background: var(--color-coltefinanciera-blue);
+  opacity: 0.9;
 }
 
 .btn--secondary {
@@ -453,12 +584,13 @@ pre code {
 
 .btn--outline {
   background: transparent;
-  border: 1px solid var(--color-border);
-  color: var(--color-text);
+  border: 2px solid var(--color-coltefinanciera-blue);
+  color: var(--color-coltefinanciera-blue);
 }
 
 .btn--outline:hover {
-  background: var(--color-secondary);
+  background: var(--color-coltefinanciera-blue);
+  color: var(--color-white);
 }
 
 .btn--sm {
@@ -767,6 +899,8 @@ select.form-control {
   background: var(--color-charcoal-700);
   border-bottom: 3px solid var(--color-coltefinanciera-gold);
   box-shadow: var(--shadow-lg);
+  position: relative;
+  z-index: 100;
 }
 
 .logo h1 {
@@ -779,9 +913,17 @@ select.form-control {
 
 .logo p {
   font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
+  color: var(--color-coltefinanciera-blue);
   margin: var(--space-4) 0 0 0;
   font-style: italic;
+  opacity: 0.9;
+}
+
+.company-logo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: var(--space-8);
 }
 
 .presentation-info h2 {
@@ -806,6 +948,8 @@ select.form-control {
   padding: var(--space-16) var(--space-32);
   background: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
+  position: relative;
+  z-index: 90;
 }
 
 .nav-controls {
@@ -823,9 +967,9 @@ select.form-control {
   width: 40px;
   height: 40px;
   border-radius: var(--radius-full);
-  border: 2px solid var(--color-border);
-  background: var(--color-secondary);
-  color: var(--color-text);
+  border: 2px solid var(--color-coltefinanciera-blue);
+  background: var(--color-surface);
+  color: var(--color-coltefinanciera-blue);
   font-weight: var(--font-weight-medium);
   cursor: pointer;
   transition: all var(--duration-normal) var(--ease-standard);
@@ -835,8 +979,10 @@ select.form-control {
 }
 
 .slide-btn:hover {
-  background: var(--color-secondary-hover);
-  border-color: var(--color-coltefinanciera-gold);
+  background: var(--color-coltefinanciera-blue);
+  color: var(--color-white);
+  border-color: var(--color-coltefinanciera-blue);
+  transform: scale(1.05);
 }
 
 .slide-btn.active {
@@ -873,45 +1019,57 @@ select.form-control {
   width: 10%;
 }
 
-/* Main Content */
+/* Main Content - Optimizado */
 .main-content {
-  padding: var(--space-32);
-  max-width: 1200px;
+  padding: var(--content-spacing-2xl);
+  max-width: 1400px;
   margin: 0 auto;
-  min-height: 600px;
+  min-height: 700px;
   position: relative;
   background: var(--color-background);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: var(--content-spacing-lg);
 }
 
-/* Slides - Fixed visibility logic */
+/* Slides - Mejorada visibilidad y transiciones */
 .slide {
   display: none !important;
   opacity: 0;
-  transform: translateY(20px);
-  transition: all var(--duration-normal) var(--ease-standard);
+  transform: translateY(30px);
+  transition: all var(--duration-normal) cubic-bezier(0.4, 0, 0.2, 1);
   width: 100%;
+  padding: var(--content-spacing-lg);
+  border-radius: var(--radius-lg);
 }
 
 .slide.active {
-  display: block !important;
+  display: flex !important;
+  flex-direction: column;
+  gap: var(--content-spacing-xl);
   opacity: 1;
   transform: translateY(0);
 }
 
 .slide h2 {
   color: var(--color-coltefinanciera-gold);
-  margin-bottom: var(--space-24);
+  margin: 0 0 var(--space-16) 0;
   text-align: center;
   font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .slide h3 {
-  color: var(--color-text-secondary);
-  margin-bottom: var(--space-20);
+  color: var(--color-coltefinanciera-blue);
+  margin-bottom: var(--space-12);
   text-align: center;
   font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
 }
 
 /* Slide 1: Title Layout */
@@ -919,10 +1077,43 @@ select.form-control {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
-  min-height: 500px;
-  gap: var(--space-32);
+  min-height: 600px;
+  padding: var(--content-spacing-xl) var(--content-spacing-md);
+  gap: var(--content-spacing-xl);
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.slide-title-layout .title-content {
+  order: 1;
+  margin-bottom: var(--content-spacing-lg);
+  z-index: 3;
+  width: 100%;
+  max-width: 800px;
+}
+
+.slide-title-layout .company-logo {
+  order: 2;
+  margin: var(--content-spacing-lg) 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--content-spacing-sm);
+}
+
+.slide-title-layout .secondary-content {
+  order: 3;
+  margin-top: var(--content-spacing-lg);
+  z-index: 1;
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--content-spacing-md);
 }
 
 .company-logo h1 {
@@ -931,6 +1122,46 @@ select.form-control {
   margin: 0;
   letter-spacing: 4px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.logo-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.slide-company-logo {
+  height: 120px;
+  width: auto;
+  object-fit: contain;
+  margin: 0;
+  display: block;
+}
+
+/* Responsive styles for logo container */
+@media (max-width: 768px) {
+  .logo-container {
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+  
+  .slide-company-logo {
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-container {
+    padding: 12px;
+    margin-bottom: 10px;
+  }
+  
+  .slide-company-logo {
+    height: 80px;
+  }
 }
 
 .logo-accent {
@@ -947,17 +1178,43 @@ select.form-control {
   margin-bottom: var(--space-16);
 }
 
-.title-content h3 {
+.title-content .main-title {
   font-size: var(--font-size-2xl);
-  color: var(--color-text-secondary);
-  margin-bottom: var(--space-20);
+  color: var(--color-coltefinanciera-blue);
+  margin: 0;
+  font-weight: var(--font-weight-bold);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
 }
 
-.tagline {
-  font-size: var(--font-size-xl);
+.secondary-content .tagline {
+  font-size: var(--font-size-2xl);
   color: var(--color-coltefinanciera-gold);
   font-style: italic;
+  font-weight: var(--font-weight-semibold);
+  margin: 0 0 var(--text-spacing-relaxed) 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  letter-spacing: 0.5px;
+  line-height: var(--line-height-tight);
+}
+
+.secondary-content .intro-message {
+  background: rgba(0, 0, 0, 0.4);
+  padding: var(--content-spacing-lg);
+  border-radius: var(--radius-lg);
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.secondary-content .intro-message p {
+  color: #ffffff;
+  font-size: var(--font-size-xl);
+  line-height: 1.7;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   font-weight: var(--font-weight-medium);
+  letter-spacing: 0.3px;
 }
 
 /* Slide 2: Points Grid */
@@ -966,20 +1223,23 @@ select.form-control {
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-24);
   margin-top: var(--space-32);
+  max-width: 100%;
 }
 
 .point-item {
   background: var(--color-surface);
   padding: var(--space-24);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--color-border);
+  border: 2px solid var(--color-border);
   text-align: center;
-  transition: transform var(--duration-normal) var(--ease-standard);
+  transition: all var(--duration-normal) var(--ease-standard);
+  box-shadow: var(--shadow-sm);
 }
 
 .point-item:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
+  border-color: var(--color-accent);
 }
 
 .point-icon {
@@ -988,14 +1248,19 @@ select.form-control {
 }
 
 .point-item h4 {
-  color: var(--color-coltefinanciera-gold);
-  margin-bottom: var(--space-12);
-  font-size: var(--font-size-lg);
+  color: var(--color-primary);
+  margin-bottom: var(--space-16);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.3;
 }
 
 .point-item p {
-  color: var(--color-text-secondary);
+  color: var(--color-text);
   margin: 0;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.6;
 }
 
 /* Slide 3: Commitment List */
@@ -1007,14 +1272,15 @@ select.form-control {
 
 .commitment-item {
   background: var(--color-surface);
-  padding: var(--space-24);
-  border-radius: var(--radius-lg);
+  padding: var(--content-spacing-lg);
+  border-radius: var(--radius-xl);
   border: 2px solid var(--color-border);
   text-align: center;
-  transition: all var(--duration-normal) var(--ease-standard);
+  transition: all var(--duration-normal) cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
-  margin-bottom: var(--space-20);
+  margin-bottom: var(--content-spacing-md);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 .commitment-item:before {
@@ -1023,14 +1289,15 @@ select.form-control {
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--color-accent), var(--color-primary));
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-coltefinanciera-gold), var(--color-primary));
+  opacity: 0.8;
 }
 
 .commitment-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(0, 51, 102, 0.15);
-  border-color: var(--color-accent);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 51, 102, 0.2);
+  border-color: var(--color-coltefinanciera-gold);
 }
 
 .bullet {
@@ -1042,8 +1309,11 @@ select.form-control {
 
 .commitment-item p {
   margin: 0;
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
   color: var(--color-text);
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+  font-weight: var(--font-weight-medium);
 }
 
 /* Slide 4: Comparison */
@@ -1105,19 +1375,22 @@ select.form-control {
 .procedure-steps {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-20);
-  margin-top: var(--space-32);
+  gap: var(--content-spacing-lg);
+  margin: var(--content-spacing-2xl) 0;
+  padding: 0 var(--content-spacing-sm);
+  max-width: 100%;
 }
 
 .step-item {
   background: var(--color-surface);
-  padding: var(--space-24);
-  border-radius: var(--radius-lg);
-  border: 2px solid var(--color-border);
+  padding: var(--content-spacing-lg);
+  border-radius: var(--radius-xl);
+  border: 2px solid var(--color-coltefinanciera-blue);
   text-align: center;
-  transition: all var(--duration-normal) var(--ease-standard);
+  transition: all var(--duration-normal) cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 51, 102, 0.15);
 }
 
 .step-item:before {
@@ -1126,14 +1399,16 @@ select.form-control {
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--color-accent), var(--color-primary));
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-coltefinanciera-gold), var(--color-coltefinanciera-blue));
+  opacity: 0.9;
 }
 
 .step-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(0, 51, 102, 0.15);
-  border-color: var(--color-accent);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0, 51, 102, 0.25);
+  border-color: var(--color-coltefinanciera-blue);
+  background: rgba(0, 51, 102, 0.08);
 }
 
 .step-number {
@@ -1150,61 +1425,83 @@ select.form-control {
   flex-shrink: 0;
 }
 
+.step-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--text-spacing-normal);
+  align-items: center;
+  text-align: center;
+}
+
 .step-content h4 {
   color: var(--color-coltefinanciera-gold);
-  margin-bottom: var(--space-8);
+  margin: 0 0 var(--text-spacing-tight) 0;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.3px;
 }
 
 .step-content p {
-  color: var(--color-text-secondary);
+  font-family: var(--font-family-base);
+  color: var(--color-text);
   margin: 0;
-  font-size: var(--font-size-sm);
+  padding: var(--space-16);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+  max-width: 280px;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-coltefinanciera-gold);
+  box-shadow: 0 2px 8px rgba(0, 51, 102, 0.1);
 }
 
 /* Slide 6: INTERCAPTA */
 .intercapta-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-32);
+  gap: var(--space-24);
   margin-top: var(--space-32);
 }
 
 .problems-side, .solutions-side {
-  padding: var(--space-24);
-  border-radius: var(--radius-lg);
+  padding: var(--space-20);
+  border-radius: var(--radius-base);
 }
 
 .problems-side {
   background: rgba(var(--color-error-rgb), 0.05);
-  border: 2px solid rgba(var(--color-error-rgb), 0.2);
+  border: 1px solid rgba(var(--color-error-rgb), 0.2);
 }
 
 .solutions-side {
   background: rgba(var(--color-success-rgb), 0.05);
-  border: 2px solid rgba(var(--color-success-rgb), 0.2);
+  border: 1px solid rgba(var(--color-success-rgb), 0.2);
 }
 
 .problems-side h3 {
-  color: var(--color-error);
-  margin-bottom: var(--space-20);
+  color: var(--color-coltefinanciera-blue);
+  margin-bottom: var(--space-16);
+  font-weight: var(--font-weight-semibold);
 }
 
 .solutions-side h3 {
-  color: var(--color-success);
-  margin-bottom: var(--space-20);
+  color: var(--color-coltefinanciera-blue);
+  margin-bottom: var(--space-16);
+  font-weight: var(--font-weight-semibold);
 }
 
 .problem-item, .solution-item {
   background: var(--color-surface);
-  padding: var(--space-24);
-  border-radius: var(--radius-lg);
-  border: 2px solid var(--color-border);
+  padding: var(--space-20);
+  border-radius: var(--radius-base);
+  border: 1px solid var(--color-border);
   text-align: center;
   transition: all var(--duration-normal) var(--ease-standard);
   position: relative;
   overflow: hidden;
   margin-bottom: var(--space-12);
   font-size: var(--font-size-md);
+  box-shadow: 0 2px 8px rgba(0, 51, 102, 0.08);
 }
 
 .problem-item:before, .solution-item:before {
@@ -1218,9 +1515,9 @@ select.form-control {
 }
 
 .problem-item:hover, .solution-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(0, 51, 102, 0.15);
-  border-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 51, 102, 0.12);
+  border-color: var(--color-primary);
 }
 
 .problem-item {
@@ -1420,7 +1717,7 @@ select.form-control {
 .checklist-item:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 25px rgba(0, 51, 102, 0.15);
-  border-color: var(--color-accent);
+  border-color: var(--color-coltefinanciera-blue);
 }
 
 .check {
@@ -1501,18 +1798,27 @@ select.form-control {
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
-    gap: var(--space-16);
+    gap: var(--content-spacing-lg);
     text-align: center;
+    z-index: 100;
+    padding: var(--content-spacing-md);
+  }
+
+  .navigation {
+    z-index: 90;
+    padding: var(--content-spacing-sm) 0;
   }
 
   .nav-controls {
     flex-direction: column;
-    gap: var(--space-12);
+    gap: var(--content-spacing-md);
+    align-items: center;
   }
 
   .slide-nav {
     flex-wrap: wrap;
     justify-content: center;
+    gap: var(--content-spacing-xs);
   }
 
   .points-grid, 
@@ -1521,16 +1827,65 @@ select.form-control {
   .intercapta-container, 
   .rootcause-content,
   .additional-info,
-  .checklist {
+  .checklist,
+  .commitments-grid,
+  .laws-grid {
     grid-template-columns: 1fr;
+    gap: var(--space-24);
   }
 
   .comparison-arrow {
     transform: rotate(90deg);
+    margin: var(--content-spacing-md) 0;
   }
 
   .main-content {
-    padding: var(--space-16);
+    padding: var(--content-spacing-lg);
+    z-index: 10;
+    min-height: auto;
+    max-width: 100%;
+  }
+
+  .slide {
+    padding: var(--content-spacing-md);
+    min-height: auto;
+  }
+
+  .content-card {
+    margin: var(--content-spacing-md) 0;
+    padding: var(--content-spacing-lg);
+  }
+
+  .slide-title-layout {
+    z-index: 20;
+    padding-top: var(--space-20);
+    gap: var(--space-32);
+    min-height: 400px;
+  }
+
+  .slide-title-layout .title-content {
+    margin-bottom: var(--space-24);
+  }
+
+  .slide-title-layout .company-logo {
+    margin-bottom: var(--space-24);
+  }
+
+  .slide-title-layout .secondary-content {
+    margin-top: var(--space-12);
+  }
+
+  .title-content .main-title {
+    font-size: var(--font-size-xl);
+    line-height: 1.3;
+  }
+
+  .secondary-content .tagline {
+    font-size: var(--font-size-lg);
+  }
+
+  .secondary-content .intro-message p {
+    font-size: var(--font-size-base);
   }
 
   .company-logo h1 {
@@ -1572,12 +1927,12 @@ select.form-control {
 
 /* Focus states */
 .slide-btn:focus-visible {
-  outline: 2px solid var(--color-coltefinanciera-gold);
+  outline: 2px solid var(--color-coltefinanciera-blue);
   outline-offset: 2px;
 }
 
 button:focus-visible {
-  outline: 2px solid #FFD700;
+  outline: 2px solid var(--color-coltefinanciera-blue);
   outline-offset: 2px;
 }
 
@@ -1603,8 +1958,9 @@ button:focus-visible {
 }
 
 .requirement-section h3 {
-  color: var(--color-primary);
+  color: var(--color-coltefinanciera-blue);
   margin-bottom: var(--space-24);
+  font-weight: var(--font-weight-semibold);
   font-size: var(--font-size-xl);
 }
 
@@ -1788,36 +2144,39 @@ button:focus-visible {
 
 /* Slide 13: SAC System */
 .sac-commitments {
-  margin-top: var(--space-32);
+  margin-top: var(--space-16);
 }
 
 .sac-commitments h3 {
   text-align: center;
-  color: var(--color-primary);
-  margin-bottom: var(--space-32);
+  color: var(--color-coltefinanciera-blue);
+  margin-bottom: var(--space-16);
   font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
 }
 
 .commitments-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-24);
   align-items: stretch;
+  max-width: 100%;
 }
 
 .commitment-card {
   background: var(--color-surface);
-  padding: var(--space-32);
-  border-radius: var(--radius-lg);
-  border: 2px solid var(--color-border);
+  padding: var(--content-spacing-lg);
+  border-radius: var(--radius-xl);
+  border: 2px solid var(--color-coltefinanciera-blue);
   text-align: center;
-  transition: all var(--duration-normal) var(--ease-standard);
+  transition: all var(--duration-normal) cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 200px;
+  box-shadow: 0 4px 16px rgba(0, 51, 102, 0.15);
 }
 
 .commitment-card:before {
@@ -1826,36 +2185,42 @@ button:focus-visible {
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--color-accent), var(--color-primary));
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-coltefinanciera-gold), var(--color-coltefinanciera-blue));
+  opacity: 0.9;
 }
 
 .commitment-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(0, 51, 102, 0.15);
-  border-color: var(--color-accent);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0, 51, 102, 0.25);
+  border-color: var(--color-coltefinanciera-blue);
+  background: rgba(0, 51, 102, 0.08);
 }
 
 .commitment-icon {
   font-size: 2.5rem;
   margin-bottom: var(--space-16);
   display: block;
+  color: var(--color-coltefinanciera-blue);
+  filter: drop-shadow(0 2px 4px rgba(0, 51, 102, 0.2));
 }
 
 .commitment-card h4 {
-  color: var(--color-primary);
-  margin-bottom: var(--space-16);
+  color: var(--color-coltefinanciera-blue);
+  margin: 0 0 var(--text-spacing-tight) 0;
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
+  letter-spacing: 0.3px;
   line-height: 1.3;
 }
 
 .commitment-card p {
   color: var(--color-text);
-  font-size: var(--font-size-md);
-  line-height: 1.6;
+  opacity: 0.9;
   margin: 0;
-  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  letter-spacing: 0.2px;
 }
 
 /* Slide 14: Defenders and Support */
@@ -1923,13 +2288,14 @@ button:focus-visible {
 
 .laws-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-24);
   align-items: stretch;
+  max-width: 100%;
 }
 
 .law-card {
-  background: var(--color-white);
+  background: var(--color-surface);
   padding: var(--space-32);
   border-radius: var(--radius-lg);
   border: 3px solid var(--color-coltefinanciera-blue);
@@ -1946,12 +2312,13 @@ button:focus-visible {
 .law-card:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-lg);
-  border-color: var(--color-coltefinanciera-gold);
+  border-color: var(--color-coltefinanciera-blue);
+  background: rgba(0, 51, 102, 0.08);
 }
 
 .law-card.highlight {
-  border-color: var(--color-coltefinanciera-gold);
-  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0.2));
+  border-color: var(--color-coltefinanciera-blue);
+  background: rgba(0, 51, 102, 0.12);
 }
 
 .law-card h4 {
@@ -1998,7 +2365,7 @@ button:focus-visible {
 
 .quiz-info h3 {
   color: var(--color-primary);
-  margin-bottom: var(--space-24);
+  margin-bottom: var(--space-12);
   font-size: var(--font-size-xl);
 }
 
@@ -2013,13 +2380,13 @@ button:focus-visible {
   padding: var(--space-12);
   background: var(--color-background);
   border-radius: var(--radius-base);
-  border-left: 4px solid var(--color-accent);
+  border-left: 4px solid var(--color-coltefinanciera-blue);
   font-size: var(--font-size-md);
 }
 
 #startQuizBtn {
-  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-hover));
-  color: var(--color-black);
+  background: linear-gradient(135deg, var(--color-coltefinanciera-blue), var(--color-coltefinanciera-blue-dark));
+  color: var(--color-white);
   font-size: var(--font-size-lg);
   padding: var(--space-16) var(--space-32);
   border: none;
@@ -2031,7 +2398,7 @@ button:focus-visible {
 
 #startQuizBtn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 51, 102, 0.3);
 }
 
 /* Quiz Container */
@@ -2060,7 +2427,7 @@ button:focus-visible {
 
 .quiz-progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--color-accent), var(--color-success));
+  background: linear-gradient(90deg, var(--color-coltefinanciera-blue), var(--color-success));
   transition: width var(--duration-normal) var(--ease-standard);
 }
 
@@ -2330,7 +2697,7 @@ button:focus-visible {
 .consequence-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 25px rgba(0, 51, 102, 0.15);
-  border-color: var(--color-accent);
+  border-color: var(--color-coltefinanciera-blue);
 }
 
 .consequence-card .card-icon {
@@ -2343,7 +2710,7 @@ button:focus-visible {
 .consequence-card .card-title {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
-  color: var(--color-coltefinanciera-gold);
+  color: var(--color-coltefinanciera-blue);
   margin-bottom: var(--space-12);
   line-height: 1.4;
 }
@@ -2375,7 +2742,7 @@ button:focus-visible {
   max-width: 320px;
   text-align: left;
   box-shadow: 0 4px 20px rgba(0, 51, 102, 0.15);
-  z-index: 9999;
+  z-index: 200;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.2s ease-out, visibility 0.2s ease-out, transform 0.2s ease-out;
@@ -2402,7 +2769,7 @@ button:focus-visible {
   border-width: 6px;
   border-style: solid;
   border-color: transparent transparent transparent var(--color-coltefinanciera-blue);
-  z-index: 10000;
+  z-index: 210;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.15s ease-out, visibility 0.15s ease-out;
@@ -2458,7 +2825,7 @@ button:focus-visible {
   position: absolute;
   border-width: 6px;
   border-style: solid;
-  z-index: 10000;
+  z-index: 210;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.2s ease-out, visibility 0.2s ease-out;
@@ -2614,7 +2981,7 @@ button:focus-visible {
   box-shadow: 0 4px 20px rgba(0, 51, 102, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: opacity 0.2s ease-out, visibility 0.2s ease-out, transform 0.2s ease-out;
-  z-index: 9999;
+  z-index: 200;
 }
 
 .tooltip-item.tooltip-right::after {
@@ -2701,7 +3068,7 @@ button:focus-visible {
   opacity: 0;
   visibility: hidden;
   transition: all 0.2s ease;
-  z-index: 9999;
+  z-index: 200;
   pointer-events: none;
 }
 
@@ -2716,7 +3083,7 @@ button:focus-visible {
   opacity: 0;
   visibility: hidden;
   transition: all 0.2s ease;
-  z-index: 10000;
+  z-index: 210;
   filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
 }
 
@@ -2762,7 +3129,7 @@ button:focus-visible {
   opacity: 0;
   visibility: hidden;
   transition: all 0.15s ease;
-  z-index: 1000;
+  z-index: 150;
   pointer-events: none;
 }
 
@@ -2778,7 +3145,7 @@ button:focus-visible {
   opacity: 0;
   visibility: hidden;
   transition: all 0.15s ease;
-  z-index: 1001;
+  z-index: 160;
 }
 
 /* HTML Tooltip - Enhanced with Coltefinanciera branding */
@@ -2821,7 +3188,7 @@ button:focus-visible {
   opacity: 0;
   visibility: hidden;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 1000;
+  z-index: 150;
   pointer-events: none;
 }
 
@@ -2877,7 +3244,7 @@ button:focus-visible {
   border-radius: 12px;
   border: 1px solid var(--color-coltefinanciera-gold);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08);
-  z-index: 1000;
+  z-index: 150;
   min-width: 280px;
   max-width: 350px;
   bottom: 100%;
@@ -2962,10 +3329,15 @@ button:focus-visible {
 }
 
 .fraud-content p {
+  font-family: var(--font-family-base);
   color: var(--color-text);
   margin-bottom: var(--space-16);
+  padding: var(--space-16);
   font-size: var(--font-size-md);
   line-height: 1.6;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-coltefinanciera-gold);
+  box-shadow: 0 2px 8px rgba(0, 51, 102, 0.1);
 }
 
 .fraud-content p:last-child {
@@ -2973,12 +3345,12 @@ button:focus-visible {
 }
 
 .fraud-content strong {
-  color: var(--color-primary);
+  color: var(--color-coltefinanciera-yellow);
   font-weight: var(--font-weight-semibold);
 }
 
 .fraud-content em {
-  color: var(--color-accent);
+  color: var(--color-coltefinanciera-blue);
   font-style: italic;
 }
 
@@ -3059,9 +3431,9 @@ button:focus-visible {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: var(--color-primary);
+  background: var(--color-coltefinanciera-blue);
   color: var(--color-white);
-  border: none;
+  border: 2px solid var(--color-coltefinanciera-blue);
   width: 50px;
   height: 50px;
   border-radius: var(--radius-full);
@@ -3069,13 +3441,14 @@ button:focus-visible {
   cursor: pointer;
   transition: all var(--duration-normal) var(--ease-standard);
   z-index: 10;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 16px rgba(0, 51, 102, 0.2);
 }
 
 .carousel-btn:hover {
-  background: var(--color-accent);
+  background: var(--color-coltefinanciera-gold);
+  color: var(--color-black);
   transform: translateY(-50%) scale(1.1);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 8px 24px rgba(255, 215, 0, 0.3);
 }
 
 .carousel-btn-prev {
@@ -3146,12 +3519,12 @@ button:focus-visible {
 }
 
 .consequence-card .tooltip-text[data-tooltip-html="true"]:hover .tooltip-content strong {
-  color: var(--color-primary);
-  font-weight: 600;
+  color: var(--color-coltefinanciera-yellow);
+  font-weight: var(--font-weight-semibold);
 }
 
 .consequence-card .tooltip-text[data-tooltip-html="true"]:hover .tooltip-content em {
-  color: var(--color-coltefinanciera-teal);
+  color: var(--color-coltefinanciera-blue);
   font-style: italic;
 }
 
@@ -3161,7 +3534,7 @@ button:focus-visible {
 }
 
 .consequence-card .tooltip-text[data-tooltip-html="true"]:hover .tooltip-content b {
-  color: var(--color-coltefinanciera-green);
+  color: var(--color-coltefinanciera-yellow);
   font-weight: bold;
 }
 
@@ -3178,9 +3551,9 @@ button:focus-visible {
 
 /* Variante light para tooltips HTML */
 .consequence-card .tooltip-text.light-tooltip[data-tooltip-html="true"]:hover .tooltip-content {
-  background-color: var(--color-white);
-  color: rgba(0, 0, 0, 0.87);
-  border: 1px solid var(--color-gray-300);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -3601,7 +3974,7 @@ button:focus-visible {
 .attention-item {
   margin-bottom: var(--space-24);
   padding: var(--space-20);
-  background: var(--color-white);
+  background: var(--color-surface);
   border-radius: var(--radius-base);
   border-left: 4px solid var(--color-coltefinanciera-green);
   box-shadow: var(--shadow-sm);
@@ -3636,7 +4009,7 @@ button:focus-visible {
 }
 
 .tool-section {
-  background: var(--color-white);
+  background: var(--color-surface);
   border-radius: var(--radius-lg);
   padding: var(--space-32);
   border: 3px solid var(--color-coltefinanciera-blue);
@@ -3697,7 +4070,7 @@ button:focus-visible {
 }
 
 .tool-description strong {
-  color: var(--color-coltefinanciera-blue);
+  color: var(--color-coltefinanciera-yellow);
 }
 
 /* Final Commitments */
@@ -3789,7 +4162,7 @@ button:focus-visible {
 @media (max-width: 1024px) {
   .commitments-grid,
   .laws-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-20);
   }
   
@@ -3821,7 +4194,7 @@ button:focus-visible {
   .question-grid {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    gap: var(--space-16);
+    gap: var(--space-24);
   }
   
   .question-grid {
@@ -3877,6 +4250,7 @@ button:focus-visible {
   h2, .slide h2 {
     font-size: var(--font-size-xl);
     line-height: 1.3;
+    color: var(--color-coltefinanciera-yellow);
   }
   
   h3 {
@@ -3924,34 +4298,74 @@ button:focus-visible {
 }
 
 @media (max-width: 480px) {
+  .main-content {
+    padding: var(--content-spacing-md);
+    margin: var(--content-spacing-xs);
+  }
+
+  .slide {
+    padding: var(--content-spacing-sm);
+  }
+
+  .header {
+    gap: var(--content-spacing-md);
+    padding: var(--content-spacing-sm);
+  }
+
+  .nav-controls {
+    gap: var(--content-spacing-sm);
+  }
+
+  .slide-nav {
+    gap: var(--content-spacing-xs);
+  }
+
+  .content-card {
+    margin: var(--content-spacing-sm) 0;
+    padding: var(--content-spacing-md);
+    border-radius: var(--radius-lg);
+  }
+
   .commitment-card,
   .law-card,
   .question-item {
-    padding: var(--space-16);
+    padding: var(--content-spacing-md);
     min-height: 140px;
   }
   
   .tooltip-item:hover::after {
     width: 220px;
     max-width: 75vw;
-    padding: var(--space-8) var(--space-12);
+    padding: var(--content-spacing-xs) var(--content-spacing-sm);
     font-size: var(--font-size-xs);
   }
   
   h1, .slide h1 {
     font-size: var(--font-size-xl);
+    margin-bottom: var(--content-spacing-md);
   }
   
   h2, .slide h2 {
     font-size: var(--font-size-lg);
+    margin-bottom: var(--content-spacing-sm);
+    color: var(--color-coltefinanciera-yellow);
   }
   
   h3 {
     font-size: var(--font-size-base);
+    margin-bottom: var(--content-spacing-sm);
   }
   
   h4 {
     font-size: var(--font-size-sm);
+    margin-bottom: var(--content-spacing-xs);
+  }
+
+  p {
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+    margin-bottom: var(--content-spacing-sm);
+    color: var(--color-white);
   }
 }
 
@@ -3959,15 +4373,35 @@ button:focus-visible {
 .content-card {
   background: var(--color-surface);
   border: 2px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-32);
-  margin: var(--space-24) 0;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  transition: all var(--duration-normal) var(--ease-standard);
+  border-radius: var(--radius-xl);
+  padding: var(--content-spacing-2xl);
+  margin: var(--content-spacing-lg) 0;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  transition: all var(--duration-normal) cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.content-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-coltefinanciera-gold), var(--color-primary));
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .content-card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.18);
+  border-color: var(--color-coltefinanciera-gold);
+}
+
+.content-card:hover::before {
+  opacity: 1;
   box-shadow: 0 12px 40px rgba(0, 51, 102, 0.15);
 }
 
@@ -3982,18 +4416,20 @@ button:focus-visible {
 .consequence-item {
   display: flex;
   align-items: flex-start;
-  background: rgba(255, 215, 0, 0.08);
+  background: rgba(0, 51, 102, 0.05);
   padding: var(--space-20);
   border-radius: var(--radius-lg);
-  border-left: 4px solid var(--color-coltefinanciera-gold);
+  border-left: 4px solid var(--color-coltefinanciera-blue);
   transition: all var(--duration-normal) var(--ease-standard);
   margin-bottom: var(--space-16);
+  border: 1px solid rgba(0, 51, 102, 0.1);
 }
 
 .consequence-item:hover {
-  background: rgba(255, 215, 0, 0.12);
+  background: rgba(0, 51, 102, 0.08);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 51, 102, 0.2);
+  border-left-color: var(--color-coltefinanciera-blue);
 }
 
 .consequence-icon {
@@ -4001,10 +4437,12 @@ button:focus-visible {
   margin-right: var(--space-12);
   flex-shrink: 0;
   margin-top: 2px;
+  color: var(--color-coltefinanciera-gold);
+  filter: drop-shadow(0 1px 2px rgba(255, 215, 0, 0.3));
 }
 
 .consequence-content h4 {
-  color: var(--color-coltefinanciera-gold);
+  color: var(--color-coltefinanciera-blue);
   margin: 0 0 var(--space-8) 0;
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-semibold);
@@ -4042,7 +4480,7 @@ button:focus-visible {
 }
 
 .highlight-content strong {
-  color: #98FB98;
+  color: var(--color-coltefinanciera-yellow);
   font-weight: var(--font-weight-semibold);
 }
 
@@ -4053,7 +4491,7 @@ button:focus-visible {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 9999;
+  z-index: 1000;
   display: none;
   align-items: center;
   justify-content: center;
@@ -4086,7 +4524,7 @@ button:focus-visible {
   overflow: hidden;
   transform: scale(0.8);
   transition: transform 0.3s ease-out;
-  z-index: 10000;
+  z-index: 1010;
 }
 
 .image-modal.show .modal-content {
@@ -4109,7 +4547,7 @@ button:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10001;
+  z-index: 1020;
   transition: all 0.2s ease;
 }
 
@@ -4167,6 +4605,51 @@ button:focus-visible {
   transform: scale(1.02);
 }
 
+/* Comparison Image Styles */
+.comparison-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: var(--space-20);
+  min-height: 200px;
+}
+
+.comparison-image.full-card {
+  padding: 0;
+  height: 100%;
+  min-height: 300px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.process-image {
+  max-width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease;
+}
+
+.comparison-image.full-card .process-image {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.process-image:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-md);
+}
+
+.comparison-image.full-card .process-image:hover {
+  transform: scale(1.05);
+}
+
 /* Responsive Modal */
 @media (max-width: 768px) {
   .modal-content {
@@ -4188,5 +4671,14 @@ button:focus-visible {
     width: 36px;
     height: 36px;
     font-size: 20px;
+  }
+  
+  .comparison-image {
+    padding: var(--space-16);
+    min-height: 150px;
+  }
+  
+  .process-image {
+    max-height: 120px;
   }
 }

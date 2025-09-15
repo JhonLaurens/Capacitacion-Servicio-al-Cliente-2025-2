@@ -17,15 +17,46 @@ class PresentationApp {
         this.visitedSlides = new Set();
         this.startTime = null;
         
+        // Theme management
+        this.currentTheme = localStorage.getItem('theme') || 'dark';
+        
         this.init();
     }
 
     init() {
         this.initSCORM();
+        this.initTheme();
         this.bindEvents();
         this.updateDisplay();
         this.showSlide(1);
         this.startTime = new Date();
+    }
+    
+    /**
+     * Inicializa el tema según la preferencia guardada
+     */
+    initTheme() {
+        // Aplicar el tema guardado
+        document.documentElement.setAttribute('data-color-scheme', this.currentTheme);
+        
+        // Cachear el botón de tema
+        this.elements.themeToggle = document.getElementById('themeToggle');
+    }
+    
+    /**
+     * Cambia entre tema claro y oscuro
+     */
+    toggleTheme() {
+        // Cambiar el tema
+        this.currentTheme = this.currentTheme === 'dark' ? 'light' : 'dark';
+        
+        // Aplicar el nuevo tema
+        document.documentElement.setAttribute('data-color-scheme', this.currentTheme);
+        
+        // Guardar preferencia
+        localStorage.setItem('theme', this.currentTheme);
+        
+        console.log(`Tema cambiado a: ${this.currentTheme}`);
     }
 
     /**
@@ -89,7 +120,7 @@ class PresentationApp {
             color: var(--color-white);
             padding: var(--space-16);
             border-radius: var(--radius-base);
-            z-index: 9999;
+            z-index: 500;
             font-weight: bold;
         `;
         message.textContent = '✅ Capacitación ya completada';
@@ -129,6 +160,11 @@ class PresentationApp {
         nextBtn.addEventListener('click', () => this.nextSlide());
         if (restartBtn) {
             restartBtn.addEventListener('click', () => this.restartPresentation());
+        }
+
+        // Theme toggle button
+        if (this.elements.themeToggle) {
+            this.elements.themeToggle.addEventListener('click', () => this.toggleTheme());
         }
 
         // Slide navigation buttons
@@ -213,7 +249,7 @@ class PresentationApp {
         checklistItems.forEach(item => {
             item.addEventListener('mouseenter', () => {
                 item.style.transform = 'scale(1.02)';
-                item.style.borderColor = 'var(--color-coltefinanciera-gold)';
+                item.style.borderColor = 'var(--color-coltefinanciera-blue)';
             });
             
             item.addEventListener('mouseleave', () => {
@@ -237,7 +273,7 @@ class PresentationApp {
         });
 
         // Add hover effects to commitment cards
-        const commitmentCards = document.querySelectorAll('.commitment-card');
+        const commitmentCards = document.querySelectorAll('.step-item');
         commitmentCards.forEach(card => {
             card.addEventListener('mouseenter', () => {
                 card.style.transform = 'scale(1.03)';
@@ -758,7 +794,7 @@ class PresentationApp {
     }
 
     animateCommitmentSlide(slide) {
-        const commitmentCards = slide.querySelectorAll('.commitment-card');
+        const commitmentCards = slide.querySelectorAll('.step-item');
         
         commitmentCards.forEach((card, index) => {
             card.style.opacity = '0';
