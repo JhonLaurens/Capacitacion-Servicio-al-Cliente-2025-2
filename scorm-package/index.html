@@ -3,41 +3,124 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Capacitación Servicio al Cliente Coltefinanciera 2025-2 en formato SCORM."
+    />
     <title>Transformando Vidas a Través del Servicio - Coltefinanciera</title>
+    <link rel="preload" href="style.css" as="style" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="imagenes/Coltefinanciera.png" />
   </head>
   <body>
-    <div class="app-container">
+    <noscript
+      >Para usar este curso, habilita JavaScript en tu navegador.</noscript
+    >
+    <div class="app-container" role="application">
       <!-- Header -->
-      <header class="header">
-        <div class="logo">
-        </div>
+      <header class="header" role="banner">
+        <div class="logo"></div>
         <div class="presentation-info">
           <h2>Transformando Vidas a Través del Servicio</h2>
           <p>Actualización 2025 - Capacitación Servicio al Cliente</p>
         </div>
         <div class="theme-toggle-container">
-          <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
-            <svg class="theme-toggle-icon sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
-              <path d="M12 2V4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M12 20V22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M4 12L2 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M22 12L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M19.7782 4.22183L18.364 5.63604" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M5.63604 18.364L4.22183 19.7782" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M19.7782 19.7782L18.364 18.364" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M5.63604 5.63604L4.22183 4.22183" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <button
+            id="themeToggle"
+            class="theme-toggle"
+            aria-label="Cambiar tema"
+          >
+            <svg
+              class="theme-toggle-icon sun-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="5"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M12 2V4"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M12 20V22"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M4 12L2 12"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M22 12L20 12"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M19.7782 4.22183L18.364 5.63604"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M5.63604 18.364L4.22183 19.7782"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M19.7782 19.7782L18.364 18.364"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M5.63604 5.63604L4.22183 4.22183"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
             </svg>
-            <svg class="theme-toggle-icon moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <svg
+              class="theme-toggle-icon moon-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
           </button>
         </div>
       </header>
 
       <!-- Navigation -->
-      <nav class="navigation">
+      <nav
+        class="navigation"
+        role="navigation"
+        aria-label="Navegación de módulos"
+      >
         <div class="nav-controls">
           <button id="prevBtn" class="btn btn--outline">← Anterior</button>
           <div class="slide-nav">
@@ -53,7 +136,7 @@
           </div>
           <button id="nextBtn" class="btn btn--outline">Siguiente →</button>
         </div>
-        <div class="progress-info">
+        <div class="progress-info" aria-live="polite">
           <span id="currentSlide">Módulo 1 de 9</span>
           <span id="timer">Timer: 0:10</span>
         </div>
@@ -65,7 +148,7 @@
       </div>
 
       <!-- Main Content -->
-      <main class="main-content">
+      <main class="main-content" role="main">
         <!-- Módulo 1: Introducción y Compromiso de Excelencia -->
         <div class="slide active" id="slide-1">
           <div
@@ -77,11 +160,19 @@
             "
           >
             <div class="title-content">
-              <h3 class="main-title">Capacitación Servicio al Cliente - Segundo Semestre 2025</h3>
+              <h3 class="main-title">
+                Capacitación Servicio al Cliente - Segundo Semestre 2025
+              </h3>
             </div>
             <div class="company-logo">
               <div class="logo-container">
-                <img src="imagenes/Coltefinanciera.png" alt="Coltefinanciera" class="slide-company-logo">
+                <img
+                  src="imagenes/Coltefinanciera.png"
+                  alt="Logo Coltefinanciera"
+                  class="slide-company-logo"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
               <div class="logo-accent"></div>
             </div>
@@ -140,6 +231,8 @@
                     src="imagenes/modulo1.png"
                     alt="Proceso anterior - Solicitudes de Información"
                     class="process-image"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>
@@ -742,6 +835,8 @@
                         <img
                           src="imagenes/Imagen1.png"
                           alt="Registro inicial de la solicitud"
+                          loading="lazy"
+                          decoding="async"
                         />
                       </div>
                       <div class="fraud-content">
@@ -767,6 +862,8 @@
                         <img
                           src="imagenes/Imagen2.png"
                           alt="Análisis y clasificación"
+                          loading="lazy"
+                          decoding="async"
                         />
                       </div>
                       <div class="fraud-content">
@@ -794,6 +891,8 @@
                         <img
                           src="imagenes/Imagen3.png"
                           alt="Selección de modalidad de fraude"
+                          loading="lazy"
+                          decoding="async"
                         />
                       </div>
                       <div class="fraud-content">
@@ -819,6 +918,8 @@
                         <img
                           src="imagenes/Imagen4.png"
                           alt="Montos reclamados y reconocidos"
+                          loading="lazy"
+                          decoding="async"
                         />
                       </div>
                       <div class="fraud-content">
@@ -877,7 +978,7 @@
     </div>
 
     <!-- SCORM API Integration -->
-    <script src="scorm-api.js"></script>
-    <script src="app.js"></script>
+    <script src="scorm-api.js" defer></script>
+    <script src="app.js" defer></script>
   </body>
 </html>

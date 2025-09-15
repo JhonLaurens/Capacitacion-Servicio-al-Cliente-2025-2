@@ -1,3 +1,3 @@
 FROM nginx:alpine
-COPY ./web /usr/share/nginx/html
+COPY ./scorm-package /usr/share/nginx/html
 EXPOSE 80

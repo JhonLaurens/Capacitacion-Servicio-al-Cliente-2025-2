@@ -1,0 +1,44 @@
+name: QA Suite
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install QA deps
+        run: npm install
+        working-directory: qa
+
+      - name: Run QA Orchestrator
+        env:
+          LH_URL: http://localhost:8080/index.html
+          LH_MIN_PERF: 80
+          LH_MIN_A11Y: 90
+          LH_MIN_BP: 90
+          LH_MIN_SEO: 80
+          REQUIRE_SCORM: ${{ vars.REQUIRE_SCORM || 'false' }}
+          SCORMCLOUD_API_BASE: https://cloud.scorm.com/api/v2
+          SCORMCLOUD_APP_ID: ${{ secrets.SCORMCLOUD_APP_ID }}
+          SCORMCLOUD_SECRET: ${{ secrets.SCORMCLOUD_SECRET }}
+          QA_REPORT_DIR: qa/reports
+        run: npm run ci
+        working-directory: qa
+
+      - name: Upload reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa-reports
+          path: qa/reports
