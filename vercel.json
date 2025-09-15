@@ -1,27 +1,21 @@
 {
   "version": 2,
-  "name": "capacitacion-servicio-cliente-2025-2",
   "builds": [
     {
       "src": "scorm-package/**",
       "use": "@vercel/static"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/scorm-package/$1"
+      "source": "/(.*)",
+      "destination": "/scorm-package/$1"
     },
     {
-      "src": "/",
-      "dest": "/scorm-package/index.html"
+      "source": "/",
+      "destination": "/scorm-package/index.html"
     }
   ],
-  "functions": {
-    "scorm-package/server.js": {
-      "runtime": "nodejs18.x"
-    }
-  },
   "headers": [
     {
       "source": "/(.*)",
