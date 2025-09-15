@@ -5314,7 +5314,11 @@ button:focus-visible {
 }
 
 .phone-card {
-  background: linear-gradient(135deg, var(--color-surface), rgba(255, 255, 255, 0.8));
+  background: linear-gradient(
+    135deg,
+    var(--color-surface),
+    rgba(255, 255, 255, 0.8)
+  );
   padding: var(--space-20);
   border-radius: var(--radius-lg);
   border: 2px solid var(--color-coltefinanciera-blue);
@@ -5331,13 +5335,21 @@ button:focus-visible {
 }
 
 .phone-card.national {
-  background: linear-gradient(135deg, var(--color-coltefinanciera-blue), var(--color-coltefinanciera-light-blue));
+  background: linear-gradient(
+    135deg,
+    var(--color-coltefinanciera-blue),
+    var(--color-coltefinanciera-light-blue)
+  );
   color: var(--color-white);
   border-color: var(--color-coltefinanciera-gold);
 }
 
 .phone-card.national:hover {
-  background: linear-gradient(135deg, var(--color-coltefinanciera-light-blue), var(--color-coltefinanciera-blue));
+  background: linear-gradient(
+    135deg,
+    var(--color-coltefinanciera-light-blue),
+    var(--color-coltefinanciera-blue)
+  );
 }
 
 .phone-card h4 {
@@ -5439,7 +5451,7 @@ button:focus-visible {
 
 .whatsapp-link {
   display: inline-block;
-  background: #25D366;
+  background: #25d366;
   color: white;
   padding: var(--space-8) var(--space-16);
   border-radius: var(--radius-base);
@@ -5450,7 +5462,7 @@ button:focus-visible {
 }
 
 .whatsapp-link:hover {
-  background: #128C7E;
+  background: #128c7e;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
 }
@@ -5515,7 +5527,11 @@ button:focus-visible {
 }
 
 .warning-card {
-  background: linear-gradient(135deg, rgba(255, 84, 89, 0.1), rgba(255, 84, 89, 0.05));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 84, 89, 0.1),
+    rgba(255, 84, 89, 0.05)
+  );
   padding: var(--space-24);
   border-radius: var(--radius-lg);
   border: 2px solid var(--color-red-400);
@@ -5544,7 +5560,11 @@ button:focus-visible {
 }
 
 .message-card {
-  background: linear-gradient(135deg, var(--color-coltefinanciera-blue), var(--color-coltefinanciera-light-blue));
+  background: linear-gradient(
+    135deg,
+    var(--color-coltefinanciera-blue),
+    var(--color-coltefinanciera-light-blue)
+  );
   padding: var(--space-24);
   border-radius: var(--radius-lg);
   border: 3px solid var(--color-coltefinanciera-gold);
@@ -5554,13 +5574,18 @@ button:focus-visible {
 }
 
 .message-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, transparent 30%, rgba(255, 215, 0, 0.1) 50%, transparent 70%);
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 215, 0, 0.1) 50%,
+    transparent 70%
+  );
   animation: shine 3s infinite;
 }
 
@@ -5575,8 +5600,12 @@ button:focus-visible {
 }
 
 @keyframes shine {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 /* Puntos a Recordar */
@@ -5645,35 +5674,187 @@ button:focus-visible {
     grid-template-columns: 1fr;
     gap: var(--space-12);
   }
-  
+
   .digital-channels,
   .presential-channels {
     grid-template-columns: 1fr;
     gap: var(--space-16);
   }
-  
+
   .remember-grid {
     grid-template-columns: 1fr;
     gap: var(--space-12);
   }
-  
+
   .phone-card,
   .digital-card,
   .presential-card {
     padding: var(--space-16);
   }
-  
+
   .info-section {
     padding: var(--space-16);
     margin-bottom: var(--space-20);
   }
-  
+
   .digital-icon,
   .presential-icon {
     font-size: 2.5rem;
   }
-  
+
   .message-card p {
     font-size: var(--font-size-md);
+  }
+}
+
+/* Estilos para la Defensoría del Consumidor Financiero - Diseño Profesional */
+.defensoria-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--content-spacing-xl);
+  margin-top: var(--content-spacing-xl);
+}
+
+.defensoria-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-coltefinanciera-blue);
+  overflow: hidden;
+  transition: all var(--duration-normal) cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(0, 51, 102, 0.15);
+}
+
+.defensoria-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 51, 102, 0.25);
+  border-color: var(--color-coltefinanciera-gold);
+}
+
+.card-header {
+  background: linear-gradient(
+    135deg,
+    var(--color-coltefinanciera-blue),
+    var(--color-coltefinanciera-light-blue)
+  );
+  color: white;
+  padding: var(--content-spacing-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+.card-icon {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-full);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.card-header h4 {
+  margin: 0;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: white;
+}
+
+.card-content {
+  padding: var(--content-spacing-lg);
+}
+
+/* Estilos específicos para defensores */
+.defender-profile {
+  padding: var(--space-16);
+  margin-bottom: var(--space-16);
+  background: var(--color-background);
+  border-radius: var(--radius-base);
+  border-left: 4px solid var(--color-coltefinanciera-gold);
+}
+
+.defender-profile:last-child {
+  margin-bottom: 0;
+}
+
+.defender-role {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--space-8);
+}
+
+.defender-name {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-coltefinanciera-blue);
+}
+
+/* Estilos específicos para contacto */
+.contact-method {
+  display: flex;
+  padding: var(--space-16);
+  margin-bottom: var(--space-12);
+  background: var(--color-background);
+  border-radius: var(--radius-base);
+  border: 1px solid var(--color-border);
+  transition: all var(--duration-fast) ease;
+}
+
+.contact-method:hover {
+  border-color: var(--color-coltefinanciera-gold);
+  box-shadow: 0 2px 8px rgba(0, 51, 102, 0.1);
+}
+
+.contact-method:last-child {
+  margin-bottom: 0;
+}
+
+.contact-label {
+  min-width: 120px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-coltefinanciera-blue);
+  font-size: var(--font-size-md);
+}
+
+.contact-value {
+  flex: 1;
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+  line-height: 1.4;
+}
+
+.contact-value small {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+/* Responsive para defensoria */
+@media (max-width: 768px) {
+  .defensoria-info-grid {
+    grid-template-columns: 1fr;
+    gap: var(--content-spacing-lg);
+  }
+
+  .contact-method {
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+
+  .contact-label {
+    min-width: auto;
+  }
+
+  .card-header {
+    padding: var(--content-spacing-md);
+  }
+
+  .card-content {
+    padding: var(--content-spacing-md);
   }
 }
