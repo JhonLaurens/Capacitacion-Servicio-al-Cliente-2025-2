@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prueba de Tema Predeterminado</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background: #f5f5f5;
+      }
+      .test-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      button {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 10px 5px;
+      }
+      button:hover {
+        background: #0056b3;
+      }
+      #result {
+        background: #f8f9fa;
+        padding: 15px;
+        border-radius: 4px;
+        margin-top: 20px;
+        border-left: 4px solid #007bff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="test-container">
+      <h1>🧪 Prueba de Tema Predeterminado</h1>
+      <p>
+        Esta página ayuda a verificar que el tema predeterminado sea
+        <strong>light</strong> (claro).
+      </p>
+
+      <div>
+        <button onclick="clearStorage()">🗑️ Limpiar localStorage</button>
+        <button onclick="testTheme()">🔍 Verificar Tema Predeterminado</button>
+        <button onclick="openApp()">🚀 Abrir Aplicación</button>
+      </div>
+
+      <div id="result"></div>
+    </div>
+
+    <script>
+      function clearStorage() {
+        localStorage.clear();
+        updateResult(
+          "✅ localStorage limpiado. Ahora la aplicación usará el tema predeterminado."
+        );
+      }
+
+      function testTheme() {
+        const currentTheme = localStorage.getItem("theme");
+        if (currentTheme === null) {
+          updateResult(
+            '✅ No hay tema guardado en localStorage. La aplicación usará "light" como predeterminado.'
+          );
+        } else {
+          updateResult(
+            `ℹ️ Tema actual guardado: <strong>${currentTheme}</strong>`
+          );
+        }
+      }
+
+      function openApp() {
+        window.open("index.html", "_blank");
+      }
+
+      function updateResult(message) {
+        document.getElementById("result").innerHTML = message;
+      }
+
+      // Verificación automática al cargar
+      window.onload = function () {
+        testTheme();
+      };
+    </script>
+  </body>
+</html>

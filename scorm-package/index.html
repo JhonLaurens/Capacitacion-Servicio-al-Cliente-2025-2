@@ -9,8 +9,8 @@
       content="Capacitación Servicio al Cliente Coltefinanciera 2025-2 en formato SCORM."
     />
     <title>Transformando Vidas a Través del Servicio - Coltefinanciera</title>
-    <link rel="preload" href="style.css" as="style" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="preload" href="style.css?v=1726414200" as="style" />
+    <link rel="stylesheet" href="style.css?v=1726414600" />
     <link rel="icon" href="imagenes/Coltefinanciera.png" />
   </head>
   <body>
@@ -20,16 +20,12 @@
     <div class="app-container" role="application">
       <!-- Header -->
       <header class="header" role="banner">
-        <div class="logo"></div>
-        <div class="presentation-info">
-          <h2>Transformando Vidas a Través del Servicio</h2>
-          <p>Actualización 2025 - Capacitación Servicio al Cliente</p>
-        </div>
         <div class="theme-toggle-container">
           <button
             id="themeToggle"
             class="theme-toggle"
             aria-label="Cambiar tema"
+            title="Cambiar entre modo claro y oscuro"
           >
             <svg
               class="theme-toggle-icon sun-icon"
@@ -113,6 +109,11 @@
             </svg>
           </button>
         </div>
+        <div class="logo"></div>
+        <div class="presentation-info">
+          <h2>Transformando Vidas a Través del Servicio</h2>
+          <p>Actualización 2025 - Capacitación Servicio al Cliente</p>
+        </div>
       </header>
 
       <!-- Navigation -->
@@ -133,12 +134,12 @@
             <button class="slide-btn" data-slide="7">7</button>
             <button class="slide-btn" data-slide="8">8</button>
             <button class="slide-btn" data-slide="9">9</button>
+            <button class="slide-btn" data-slide="10">10</button>
           </div>
           <button id="nextBtn" class="btn btn--outline">Siguiente →</button>
         </div>
         <div class="progress-info" aria-live="polite">
-          <span id="currentSlide">Módulo 1 de 9</span>
-          <span id="timer">Timer: 0:10</span>
+          <span id="currentSlide">Módulo 1 de 10</span>
         </div>
       </nav>
 
@@ -177,7 +178,7 @@
               <div class="logo-accent"></div>
             </div>
             <div class="secondary-content">
-              <p class="tagline">Coltefinanciera: Siempre a tu lado</p>
+              <p class="tagline">Oportunidades todos los días</p>
               <div class="intro-message">
                 <p>
                   Cada interacción es una oportunidad para transformar la
@@ -592,7 +593,7 @@
 
         <!-- Módulo 6: Sistema SAC - 5 Compromisos Inquebrantables -->
         <div class="slide" id="slide-6">
-          <h2>🎯 Sistema de Atención al Consumidor (SAC)</h2>
+          <h2>🎯 Acciones Importantes en Atención al Consumidor Financiero</h2>
           <div class="procedure-steps">
             <div
               class="step-item"
@@ -689,7 +690,18 @@
         <!-- Módulo 7: Defensoría del Consumidor Financiero -->
         <div class="slide" id="slide-7">
           <h2>👨‍⚖️ Defensoría del Consumidor Financiero</h2>
+
+          <!-- Definición -->
+          <div class="info-card mb-4">
+            <h3>🤔 ¿Qué es?</h3>
+            <p>
+              Entidad independiente y gratuita que media entre el cliente y
+              Coltefinanciera cuando hay inconformidades.
+            </p>
+          </div>
+
           <div class="procedure-steps">
+            <!-- Defensores -->
             <div
               class="step-item"
               style="
@@ -698,17 +710,17 @@
                 transition: 0.3s ease-out;
               "
             >
-              <div class="step-number">1</div>
+              <div class="step-number">👥</div>
               <div class="step-content">
-                <h5>👨‍⚖️ Defensor Principal</h5>
-                <p>
-                  <strong>Dr. Darío Laguado Giraldo</strong> - Nuestro aliado
-                  principal en la protección al cliente, encargado de dar
-                  trámite a las quejas contra Coltefinanciera en forma objetiva
-                  y gratuita.
-                </p>
+                <h5>� Nuestros Defensores</h5>
+                <div class="defender-info">
+                  <p><strong>Principal:</strong> Dr. Darío Laguado Giraldo</p>
+                  <p><strong>Suplente:</strong> Christiam Infante</p>
+                </div>
               </div>
             </div>
+
+            <!-- Información de Contacto -->
             <div
               class="step-item"
               style="
@@ -717,17 +729,31 @@
                 transition: 0.3s ease-out;
               "
             >
-              <div class="step-number">2</div>
+              <div class="step-number">📞</div>
               <div class="step-content">
-                <h5>👨‍💼 Defensor Suplente</h5>
-                <p>
-                  <strong>Christiam Infante</strong> - Actúa como vocero de los
-                  Consumidores Financieros ante la compañía, con la posibilidad
-                  de presentar recomendaciones, propuestas y peticiones. Puede
-                  actuar como Conciliador en Derecho.
-                </p>
+                <h5>📞 ¿Cómo contactarlos?</h5>
+                <div class="contact-info">
+                  <p>
+                    <strong>🌐 Web:</strong> defensorialg.com.co → Click en logo
+                    Coltefinanciera
+                  </p>
+                  <p>
+                    <strong>📧 Email:</strong> reclamaciones@defensorialg.com.co
+                  </p>
+                  <p><strong>📱 Teléfonos:</strong></p>
+                  <ul class="phone-list">
+                    <li>601 373 6697 / 601 5970 412</li>
+                    <li>Celular: 320 398 1187</li>
+                  </ul>
+                  <p>
+                    <strong>⏰ Horario:</strong> Lunes a viernes, 9:00 AM - 4:00
+                    PM
+                  </p>
+                </div>
               </div>
             </div>
+
+            <!-- Cuándo dirigir al cliente -->
             <div
               class="step-item"
               style="
@@ -736,17 +762,19 @@
                 transition: 0.3s ease-out;
               "
             >
-              <div class="step-number">3</div>
+              <div class="step-number">🎯</div>
               <div class="step-content">
-                <h5>🔍 Manual de Atención Especial</h5>
-                <p>
-                  Para clientes con discapacidad, nuestro Manual de Atención
-                  Especial marca la hoja de ruta. Consultar procedimientos
-                  específicos en la intranet para garantizar una atención
-                  inclusiva y adecuada.
-                </p>
+                <h5>🎯 ¿Cuándo dirigir al cliente?</h5>
+                <ul class="when-to-refer">
+                  <li>Cliente insatisfecho con nuestra respuesta</li>
+                  <li>Siente que sus derechos fueron vulnerados</li>
+                  <li>Busca mediación imparcial</li>
+                  <li>Quiere presentar queja formal</li>
+                </ul>
               </div>
             </div>
+
+            <!-- Lo que debes saber -->
             <div
               class="step-item"
               style="
@@ -755,15 +783,21 @@
                 transition: 0.3s ease-out;
               "
             >
-              <div class="step-number">4</div>
+              <div class="step-number">✅</div>
               <div class="step-content">
-                <h5>🛡️ Protección que Construye Confianza</h5>
-                <p>
-                  Demostramos con acciones que la seguridad del dinero de
-                  nuestros clientes es nuestra prioridad absoluta. Hablamos sin
-                  letra pequeña ni sorpresas, construyendo relaciones
-                  transparentes y duraderas.
-                </p>
+                <h5>✅ Lo que debes saber:</h5>
+                <div class="key-points">
+                  <div class="highlight-point">
+                    100% GRATUITO para el cliente
+                  </div>
+                  <div class="highlight-point">
+                    Servicio objetivo e imparcial
+                  </div>
+                  <div class="highlight-point">Pueden conciliar en derecho</div>
+                  <div class="highlight-point">
+                    Es nuestro aliado para mejorar
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -953,6 +987,155 @@
                 <button class="indicator"></button>
                 <button class="indicator"></button>
                 <button class="indicator"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MÓDULO 10: Canales de Atención Coltefinanciera -->
+        <div class="slide" id="slide-10">
+          <div class="slide-header">
+            <div class="module-badge">
+              <span class="module-number">10</span>
+            </div>
+            <h2>📞 Canales de Atención Coltefinanciera</h2>
+            <p class="slide-description">
+              Conoce todos los canales de comunicación disponibles para brindar el mejor servicio a nuestros clientes
+            </p>
+          </div>
+
+          <div class="slide-content">
+            <!-- Líneas Telefónicas por Ciudad -->
+            <div class="info-section">
+              <h3>🏙️ Líneas Telefónicas por Ciudad</h3>
+              <div class="phone-grid">
+                <div class="phone-card">
+                  <h4>Bogotá</h4>
+                  <p class="phone-number">(601) 744 3440</p>
+                  <span class="phone-option">Opción 1</span>
+                </div>
+                <div class="phone-card">
+                  <h4>Medellín</h4>
+                  <p class="phone-number">(604) 604 3440</p>
+                  <span class="phone-option">Opción 1</span>
+                </div>
+                <div class="phone-card">
+                  <h4>Cali</h4>
+                  <p class="phone-number">(602) 487 3440</p>
+                  <span class="phone-option">Opción 1</span>
+                </div>
+                <div class="phone-card">
+                  <h4>Cúcuta</h4>
+                  <p class="phone-number">(607) 594 3440</p>
+                  <span class="phone-option">Opción 1</span>
+                </div>
+                <div class="phone-card">
+                  <h4>Bucaramanga</h4>
+                  <p class="phone-number">(607) 697 3440</p>
+                  <span class="phone-option">Opción 1</span>
+                </div>
+                <div class="phone-card">
+                  <h4>Barranquilla</h4>
+                  <p class="phone-number">(605) 385 3440</p>
+                  <span class="phone-option">Opción 1</span>
+                </div>
+                <div class="phone-card">
+                  <h4>Pereira</h4>
+                  <p class="phone-number">(606) 340 0825</p>
+                  <span class="phone-option">Opción 1</span>
+                </div>
+                <div class="phone-card">
+                  <h4>Manizales</h4>
+                  <p class="phone-number">(606) 895 6845</p>
+                  <span class="phone-option">Opción 1</span>
+                </div>
+                <div class="phone-card national">
+                  <h4>🌍 Resto del País</h4>
+                  <p class="phone-number">01800 01800 40</p>
+                  <span class="phone-option">Línea gratuita</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Canales Digitales -->
+            <div class="info-section">
+              <h3>💻 Canales Digitales</h3>
+              <div class="digital-channels">
+                <div class="digital-card">
+                  <div class="digital-icon">🌐</div>
+                  <h4>Página Web</h4>
+                  <p>Servicio al Cliente → "Escríbanos"</p>
+                  <span class="channel-note">Canal oficial para PQRS</span>
+                </div>
+                <div class="digital-card">
+                  <div class="digital-icon">💬</div>
+                  <h4>Chat Coltebot - WhatsApp</h4>
+                  <p class="phone-number">310 455 4636</p>
+                  <a href="https://api.whatsapp.com/message/FHJFAPESCA2NG1?autoload=1&app_absent=0" 
+                     target="_blank" 
+                     class="whatsapp-link">Chat directo</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Atención Presencial -->
+            <div class="info-section">
+              <h3>🏢 Atención Presencial</h3>
+              <div class="presential-channels">
+                <div class="presential-card">
+                  <div class="presential-icon">📍</div>
+                  <h4>Agencias Coltefinanciera</h4>
+                  <p>Consulta ubicaciones en:</p>
+                  <a href="https://www.coltefinanciera.com.co/servicio-al-cliente/agencias/" 
+                     target="_blank" 
+                     class="website-link">coltefinanciera.com.co/servicio-al-cliente/agencias</a>
+                </div>
+                <div class="presential-card">
+                  <div class="presential-icon">👨‍💼</div>
+                  <h4>Gerentes de Cuenta</h4>
+                  <p>Atención personalizada para clientes empresariales</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Información Importante -->
+            <div class="warning-section">
+              <h3>⚠️ Información Importante</h3>
+              <div class="warning-card">
+                <h4>📧 Correo Uso Interno</h4>
+                <p><strong>ServicioAlCliente@coltefinanciera.com.co</strong> es <strong>SOLO para uso interno</strong> de la compañía</p>
+                <p class="warning-text"><strong>NO se utiliza</strong> para que los clientes radiquen PQRS</p>
+              </div>
+            </div>
+
+            <!-- Mensaje Clave -->
+            <div class="key-message">
+              <h3>🎯 Mensaje Clave</h3>
+              <div class="message-card">
+                <p>"Ofrecemos múltiples canales de atención: telefónico, WhatsApp, web y presencial. Para PQRS utilice los canales oficiales, NO el correo interno."</p>
+              </div>
+            </div>
+
+            <!-- Puntos a Recordar -->
+            <div class="remember-section">
+              <h3>✅ Puntos a Recordar</h3>
+              <div class="remember-grid">
+                <div class="remember-item">
+                  <span class="remember-icon">📞</span>
+                  <p><strong>Todas las líneas telefónicas</strong> requieren marcar <strong>opción 1</strong></p>
+                </div>
+                <div class="remember-item">
+                  <span class="remember-icon">💬</span>
+                  <p><strong>Chat Coltebot disponible</strong> con enlace directo</p>
+                </div>
+                <div class="remember-item">
+                  <span class="remember-icon">📧</span>
+                  <p><strong>Correo interno</strong> NO es canal para clientes</p>
+                </div>
+                <div class="remember-item">
+                  <span class="remember-icon">📝</span>
+                  <p><strong>PQRS solo</strong> por canales oficiales autorizados</p>
+                </div>
               </div>
             </div>
           </div>

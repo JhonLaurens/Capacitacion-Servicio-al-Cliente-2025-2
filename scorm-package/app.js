@@ -2,18 +2,7 @@
 class PresentationApp {
   constructor() {
     this.currentSlide = 1;
-    this.totalSlides = 9;
-    this.slideTimers = {
-      1: "0:10",
-      2: "0:25",
-      3: "0:30",
-      4: "0:25",
-      5: "0:30",
-      6: "0:35",
-      7: "0:25",
-      8: "0:25",
-      9: "0:30",
-    };
+    this.totalSlides = 10;
 
     // DOM elements cache
     this.elements = {};
@@ -24,7 +13,7 @@ class PresentationApp {
     this.startTime = null;
 
     // Theme management
-    this.currentTheme = localStorage.getItem("theme") || "dark";
+    this.currentTheme = localStorage.getItem("theme") || "light";
 
     this.init();
   }
@@ -964,14 +953,6 @@ class PresentationApp {
     const currentSlideElement = document.getElementById("currentSlide");
     if (currentSlideElement) {
       currentSlideElement.textContent = `Módulo ${this.currentSlide} de ${this.totalSlides}`;
-    }
-
-    // Update timer
-    const timerElement = document.getElementById("timer");
-    if (timerElement && this.slideTimers[this.currentSlide]) {
-      timerElement.textContent = `Timer: ${
-        this.slideTimers[this.currentSlide]
-      }`;
     }
 
     // Update progress bar
