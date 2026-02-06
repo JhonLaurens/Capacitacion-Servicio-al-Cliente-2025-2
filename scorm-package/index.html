@@ -6,14 +6,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="description"
-      content="Capacitación Servicio al Cliente Coltefinanciera 2025-2 en formato SCORM."
+      content="Capacitación Servicio al Cliente Coltefinanciera 2025-2 en formato SCORM compatible con Moodle."
     />
+    <meta
+      name="author"
+      content="Coltefinanciera - Departamento de Capacitación"
+    />
+    <meta
+      name="keywords"
+      content="capacitación, servicio al cliente, Coltefinanciera, SCORM, Moodle, financiero"
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- SCORM Metadata -->
+    <meta name="scorm-version" content="1.2" />
+    <meta name="scorm-type" content="sco" />
+    <meta name="scorm-identifier" content="COLTEFINANCIERA_SAC_2025_2_MOODLE" />
+
+    <!-- Open Graph for Moodle previews -->
+    <meta
+      property="og:title"
+      content="Capacitación Servicio al Cliente - Coltefinanciera"
+    />
+    <meta
+      property="og:description"
+      content="Capacitación virtual de 10 módulos sobre servicio al cliente"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="es_CO" />
+
     <title>Transformando Vidas a Través del Servicio - Coltefinanciera</title>
+
+    <!-- Preload critical resources -->
     <link rel="preload" href="style.css?v=1726414200" as="style" />
+    <link rel="preload" href="app.js" as="script" />
+    <link rel="preload" href="scorm-api.js" as="script" />
+    <link rel="preload" href="imagenes/Coltefinanciera.png" as="image" />
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css?v=1726414600" />
     <link rel="icon" href="imagenes/Coltefinanciera.png" />
+
+    <!-- SCORM API must load first -->
+    <script src="scorm-api.js" defer></script>
+    <script src="app.js" defer></script>
   </head>
-  <body>
+  <body class="scorm-content" data-scorm-version="1.2" data-platform="moodle">
+    <!-- SCORM Initialization -->
+    <div
+      id="scorm-status"
+      class="sr-only"
+      aria-live="polite"
+      aria-atomic="true"
+    >
+      Inicializando contenido SCORM...
+    </div>
+
     <noscript
       >Para usar este curso, habilita JavaScript en tu navegador.</noscript
     >
@@ -813,7 +862,7 @@
         <!-- Módulo 9: Carrusel de Información de Fraudes -->
         <div class="slide" id="slide-9">
           <div class="slide-content">
-            <h2>Módulo 9: Proceso de Radicación de Casos de Fraude</h2>
+            <h2>Proceso de Radicación de Casos de Fraude</h2>
 
             <div class="carousel-container">
               <div class="carousel-wrapper">
@@ -943,6 +992,50 @@
                 <button class="indicator"></button>
                 <button class="indicator"></button>
                 <button class="indicator"></button>
+              </div>
+            </div>
+
+            <!-- Información Regulatoria - Circular 019 de 2024 -->
+            <div class="regulatory-update">
+              <div class="update-header">
+                <div class="update-icon">📋</div>
+                <h3>Marco Regulatorio - Circular 019 de 2024</h3>
+              </div>
+              <div class="update-content">
+                <div class="implementation-notice">
+                  <div class="notice-badge">
+                    <span class="badge-icon">📅</span>
+                    <span class="badge-text">Implementado en Julio 2025</span>
+                  </div>
+                  <p class="notice-description">
+                    La <strong>Circular 019 de 2024</strong> de la
+                    Superintendencia Financiera de Colombia establece los
+                    lineamientos específicos para la radicación y manejo de
+                    casos de fraude en el sector financiero, garantizando un
+                    proceso estandarizado y eficiente.
+                  </p>
+                </div>
+                <div class="key-benefits">
+                  <h4>Principales beneficios de la implementación:</h4>
+                  <ul class="benefits-list">
+                    <li>
+                      <span class="benefit-icon">✅</span>
+                      Proceso estandarizado para la radicación de fraudes
+                    </li>
+                    <li>
+                      <span class="benefit-icon">📊</span>
+                      Mejor trazabilidad y seguimiento de casos
+                    </li>
+                    <li>
+                      <span class="benefit-icon">⚡</span>
+                      Respuesta más rápida y eficiente a los clientes
+                    </li>
+                    <li>
+                      <span class="benefit-icon">🛡️</span>
+                      Mayor protección y prevención de fraudes
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>

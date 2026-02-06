@@ -61,18 +61,30 @@ class PresentationApp {
   }
 
   /**
-   * Inicializa la integración SCORM
+   * Inicializa la integración SCORM con mejoras para Moodle
    */
   initSCORM() {
-    // Esperar a que la API SCORM esté disponible
-    setTimeout(() => {
+    // Actualizar estado de carga
+    this.updateSCORMStatus("Buscando API SCORM...");
+
+    // Intentar múltiples veces para asegurar conexión con Moodle
+    let attempts = 0;
+    const maxAttempts = 10;
+
+    const tryConnection = () => {
+      attempts++;
+
       if (window.scormAPI) {
         this.scormAPI = window.scormAPI;
-        console.log("SCORM API integrada exitosamente");
+        console.log("SCORM API integrada exitosamente con Moodle");
+        this.updateSCORMStatus("SCORM conectado exitosamente");
 
         // Verificar estado inicial
         const status = this.scormAPI.getStatus();
         console.log("Estado SCORM inicial:", status);
+
+        // Obtener datos del estudiante si están disponibles
+        this.getStudentData();
 
         // Si ya está completado, mostrar mensaje
         if (
@@ -80,11 +92,95 @@ class PresentationApp {
           status.lessonStatus === "completed"
         ) {
           this.showCompletionMessage();
+        } else {
+          // Marcar como en progreso si es el primer acceso
+          if (status.lessonStatus === "not attempted") {
+            this.scormAPI.setStatus("incomplete");
+          }
         }
+
+        // Configurar auto-guardado cada 30 segundos
+        this.setupAutoSave();
+      } else if (attempts < maxAttempts) {
+        console.log(
+          `Intento ${attempts}/${maxAttempts} - Esperando API SCORM...`
+        );
+        this.updateSCORMStatus(
+          `Conectando con Moodle... (${attempts}/${maxAttempts})`
+        );
+        setTimeout(tryConnection, 1000);
       } else {
         console.log("Funcionando en modo standalone (sin SCORM)");
+        this.updateSCORMStatus("Modo standalone - Sin conexión SCORM");
       }
-    }, 1000);
+    };
+
+    tryConnection();
+  }
+
+  /**
+   * Obtiene datos del estudiante desde Moodle
+   */
+  getStudentData() {
+    if (!this.scormAPI) return;
+
+    try {
+      const studentId = this.scormAPI.getValue("cmi.core.student_id");
+      const studentName = this.scormAPI.getValue("cmi.core.student_name");
+      const lessonLocation = this.scormAPI.getValue("cmi.core.lesson_location");
+
+      if (studentName) {
+        console.log("Estudiante:", studentName);
+        this.updateSCORMStatus(`Bienvenido, ${studentName}`);
+      }
+
+      // Si hay una ubicación guardada, navegar a ella
+      if (lessonLocation && !isNaN(lessonLocation)) {
+        const savedSlide = parseInt(lessonLocation);
+        if (savedSlide > 0 && savedSlide <= this.totalSlides) {
+          console.log("Restaurando ubicación:", savedSlide);
+          setTimeout(() => {
+            this.navigateToSlide(savedSlide);
+          }, 2000);
+        }
+      }
+    } catch (error) {
+      console.warn("Error obteniendo datos del estudiante:", error);
+    }
+  }
+
+  /**
+   * Configura guardado automático para Moodle
+   */
+  setupAutoSave() {
+    if (!this.scormAPI) return;
+
+    // Guardar progreso cada 30 segundos
+    setInterval(() => {
+      if (this.scormAPI && this.scormAPI.isInitialized) {
+        this.scormAPI.commit();
+        console.log("Auto-guardado ejecutado");
+      }
+    }, 30000);
+
+    // Guardar al cambiar de pestaña o ventana
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden && this.scormAPI) {
+        this.scormAPI.commit();
+        console.log("Guardado por cambio de visibilidad");
+      }
+    });
+  }
+
+  /**
+   * Actualiza el estado SCORM en la interfaz
+   */
+  updateSCORMStatus(message) {
+    const statusElement = document.getElementById("scorm-status");
+    if (statusElement) {
+      statusElement.textContent = message;
+      console.log("Estado SCORM:", message);
+    }
   }
 
   /**
@@ -99,20 +195,31 @@ class PresentationApp {
     // Calcular progreso basado en slides visitados
     const progressPercent = (this.visitedSlides.size / this.totalSlides) * 100;
 
-    // Enviar progreso al LMS y ubicación aproximada
+    // Guardar ubicación actual para Moodle
+    this.scormAPI.setValue(
+      "cmi.core.lesson_location",
+      this.currentSlide.toString()
+    );
+
+    // Enviar progreso al LMS
     this.scormAPI.setProgress(progressPercent);
 
     console.log(
       `Progreso SCORM: ${progressPercent.toFixed(1)}% (${
         this.visitedSlides.size
-      }/${this.totalSlides} módulos)`
+      }/${this.totalSlides} módulos visitados)`
     );
 
     // Si visitó todos los slides, marcar como completado
     if (this.visitedSlides.size >= this.totalSlides) {
       this.scormAPI.setStatus("completed");
+      this.scormAPI.setScore(100, 100, 0); // Puntuación perfecta por completar
+      console.log("¡Capacitación completada exitosamente en Moodle!");
       this.showCompletionInfo();
     }
+
+    // Confirmar cambios en Moodle
+    this.scormAPI.commit();
   }
 
   /**

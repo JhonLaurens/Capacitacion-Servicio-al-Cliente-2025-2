@@ -1,0 +1,153 @@
+{
+  "moodle": {
+    "compatibility": {
+      "version": "4.0+",
+      "scorm_version": "1.2",
+      "responsive": true,
+      "mobile_friendly": true,
+      "accessibility": "WCAG 2.1 AA"
+    },
+    "settings": {
+      "display_course_structure": true,
+      "display_attempt_status": true,
+      "max_attempts": 3,
+      "grading_method": "highest_attempt",
+      "force_completed": false,
+      "force_new_attempt": false,
+      "lock_after_final_attempt": false,
+      "mastery_score": 80,
+      "auto_continue": true,
+      "auto_commit": true,
+      "display_activity_name": true,
+      "skip_content_structure_page": false,
+      "hide_browse": false,
+      "hide_review": false,
+      "hide_toc": false,
+      "nav_position_left": true,
+      "auto_review": true
+    },
+    "completion": {
+      "tracking": "automatic",
+      "require_view": true,
+      "require_grade": false,
+      "require_completion_date": false,
+      "expected_completion_time": "45 minutes"
+    },
+    "appearance": {
+      "display_in_popup": false,
+      "popup_width": 1024,
+      "popup_height": 768,
+      "popup_resizable": true,
+      "popup_scrollbars": true,
+      "popup_directories": false,
+      "popup_location": false,
+      "popup_menubar": false,
+      "popup_toolbar": false,
+      "popup_status": false,
+      "skip_content_structure": false,
+      "width": "100%",
+      "height": "500px"
+    },
+    "navigation": {
+      "show_navigation": true,
+      "navigation_position": "left",
+      "show_toc": true,
+      "toc_display": "full",
+      "disable_preview_mode": false
+    },
+    "reporting": {
+      "detailed_report": true,
+      "interactions_report": true,
+      "objectives_report": false,
+      "raw_data": true,
+      "graph_data": true
+    }
+  },
+  "content": {
+    "title": "Capacitación Servicio al Cliente - Segundo Semestre 2025",
+    "description": "Capacitación virtual para colaboradores de Coltefinanciera sobre servicio al cliente, normatividad y procedimientos.",
+    "language": "es",
+    "duration": "PT45M",
+    "difficulty": "beginner",
+    "modules": [
+      {
+        "id": "modulo-1",
+        "title": "Introducción y Compromiso de Excelencia",
+        "duration": "PT5M"
+      },
+      {
+        "id": "modulo-2",
+        "title": "Nueva Tipología PETICIONES",
+        "duration": "PT5M"
+      },
+      {
+        "id": "modulo-3",
+        "title": "Procedimiento PR-M4-P2-01 de Radicación",
+        "duration": "PT5M"
+      },
+      {
+        "id": "modulo-4",
+        "title": "Metodología - Causa Raíz",
+        "duration": "PT5M"
+      },
+      {
+        "id": "modulo-5",
+        "title": "Marco Normativo y Leyes Vigentes",
+        "duration": "PT5M"
+      },
+      {
+        "id": "modulo-6",
+        "title": "Sistema SAC - 5 Compromisos Inquebrantables",
+        "duration": "PT5M"
+      },
+      {
+        "id": "modulo-7",
+        "title": "Defensoría del Consumidor Financiero",
+        "duration": "PT5M"
+      },
+      {
+        "id": "modulo-8",
+        "title": "Herramientas de Supervisión y Control",
+        "duration": "PT5M"
+      },
+      {
+        "id": "modulo-9",
+        "title": "Proceso de Radicación de Casos de Fraude",
+        "duration": "PT5M"
+      },
+      {
+        "id": "modulo-10",
+        "title": "Canales de Atención Coltefinanciera",
+        "duration": "PT5M"
+      }
+    ]
+  },
+  "technical": {
+    "min_browser_versions": {
+      "chrome": "90",
+      "firefox": "88",
+      "safari": "14",
+      "edge": "90"
+    },
+    "required_features": [
+      "javascript",
+      "css3",
+      "html5",
+      "localStorage",
+      "sessionStorage"
+    ],
+    "optional_features": ["webgl", "canvas", "audio", "video"],
+    "file_size": "3.0MB",
+    "bandwidth_requirement": "low"
+  },
+  "accessibility": {
+    "screen_reader_compatible": true,
+    "keyboard_navigation": true,
+    "high_contrast_support": true,
+    "zoom_support": "300%",
+    "language_options": ["es"],
+    "closed_captions": false,
+    "audio_descriptions": false,
+    "wcag_level": "AA"
+  }
+}

@@ -3796,6 +3796,8 @@ button:focus-visible {
   max-width: 1000px;
   margin: var(--space-32) auto;
   position: relative;
+  padding: 0 var(--space-20); /* Padding mínimo */
+  overflow: visible;
 }
 
 .carousel-wrapper {
@@ -3956,6 +3958,53 @@ button:focus-visible {
 
   .carousel-container {
     max-width: 95%;
+    padding: 0 var(--space-16); /* Padding mínimo en tablets */
+  }
+
+  .carousel-btn {
+    width: 45px;
+    height: 45px;
+    font-size: var(--font-size-lg);
+  }
+
+  .carousel-btn-prev {
+    left: 10px; /* Más cerca del borde en tablets */
+  }
+
+  .carousel-btn-next {
+    right: 10px; /* Más cerca del borde en tablets */
+  }
+}
+
+/* Ajustes adicionales para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .carousel-container {
+    padding: 0 var(--space-12);
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: var(--font-size-md);
+    border-width: 2px;
+  }
+
+  .carousel-btn-prev {
+    left: 8px; /* Muy cerca del borde en móviles */
+  }
+
+  .carousel-btn-next {
+    right: 8px; /* Muy cerca del borde en móviles */
+  }
+
+  .fraud-card {
+    flex-direction: column;
+    gap: var(--space-16);
+  }
+
+  .fraud-image {
+    flex: none;
+    max-width: 100%;
   }
 }
 
@@ -3964,37 +4013,70 @@ button:focus-visible {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: var(--color-coltefinanciera-blue);
+  background: rgba(0, 51, 102, 0.95);
   color: var(--color-white);
-  border: 2px solid var(--color-coltefinanciera-blue);
+  border: 2px solid rgba(255, 255, 255, 0.8);
   width: 50px;
   height: 50px;
   border-radius: var(--radius-full);
   font-size: var(--font-size-xl);
   cursor: pointer;
   transition: all var(--duration-normal) var(--ease-standard);
-  z-index: 10;
-  box-shadow: 0 4px 16px rgba(0, 51, 102, 0.2);
+  z-index: 20;
+  box-shadow: 0 6px 20px rgba(0, 51, 102, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+  visibility: visible !important;
+  pointer-events: auto;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 .carousel-btn:hover {
-  background: var(--color-coltefinanciera-gold);
+  background: rgba(255, 215, 0, 0.95);
   color: var(--color-black);
   transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 8px 24px rgba(255, 215, 0, 0.3);
+  box-shadow: 0 8px 28px rgba(255, 215, 0, 0.6);
+  opacity: 1;
+  border-color: rgba(0, 51, 102, 0.8);
 }
 
 .carousel-btn-prev {
-  left: -25px;
+  left: 15px; /* Dentro del área visible */
 }
 
 .carousel-btn-next {
-  right: -25px;
+  right: 15px; /* Dentro del área visible */
 }
 
 .carousel-btn span {
   display: block;
   line-height: 1;
+  font-weight: bold;
+}
+
+/* Animación de pulso para hacer las flechas más visibles */
+@keyframes carousel-pulse {
+  0% {
+    box-shadow: 0 6px 20px rgba(0, 51, 102, 0.6);
+  }
+  50% {
+    box-shadow: 0 6px 20px rgba(0, 51, 102, 0.8),
+      0 0 0 5px rgba(0, 51, 102, 0.2);
+  }
+  100% {
+    box-shadow: 0 6px 20px rgba(0, 51, 102, 0.6);
+  }
+}
+
+.carousel-btn {
+  animation: carousel-pulse 2s infinite;
+}
+
+.carousel-btn:hover {
+  animation: none; /* Detener animación al hacer hover */
 }
 
 /* Carousel Indicators */
@@ -5856,5 +5938,186 @@ button:focus-visible {
 
   .card-content {
     padding: var(--content-spacing-md);
+  }
+}
+
+/* Estilos para la Información Regulatoria - Circular 019 */
+.regulatory-update {
+  margin-top: var(--content-spacing-2xl);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 51, 102, 0.05),
+    rgba(255, 215, 0, 0.05)
+  );
+  border: 2px solid var(--color-coltefinanciera-blue);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 51, 102, 0.12);
+  transition: all var(--duration-normal) ease;
+}
+
+.regulatory-update:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 51, 102, 0.18);
+  border-color: var(--color-coltefinanciera-gold);
+}
+
+.update-header {
+  background: linear-gradient(
+    135deg,
+    var(--color-coltefinanciera-blue),
+    var(--color-coltefinanciera-light-blue)
+  );
+  color: white;
+  padding: var(--content-spacing-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+.update-icon {
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-full);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.update-header h3 {
+  margin: 0;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: white;
+}
+
+.update-content {
+  padding: var(--content-spacing-xl);
+}
+
+.implementation-notice {
+  margin-bottom: var(--content-spacing-xl);
+}
+
+.notice-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  background: var(--color-coltefinanciera-gold);
+  color: var(--color-slate-900);
+  padding: var(--space-12) var(--space-20);
+  border-radius: var(--radius-full);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-md);
+  margin-bottom: var(--space-20);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+.badge-icon {
+  font-size: 1.1rem;
+}
+
+.notice-description {
+  font-size: var(--font-size-lg);
+  line-height: 1.6;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.notice-description strong {
+  color: var(--color-coltefinanciera-blue);
+  font-weight: var(--font-weight-bold);
+}
+
+.key-benefits h4 {
+  color: var(--color-coltefinanciera-blue);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin: 0 0 var(--space-20) 0;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefits-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-12);
+  padding: var(--space-16);
+  margin-bottom: var(--space-12);
+  background: var(--color-surface);
+  border-radius: var(--radius-base);
+  border-left: 4px solid var(--color-coltefinanciera-gold);
+  transition: all var(--duration-fast) ease;
+}
+
+.benefits-list li:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.1);
+}
+
+.benefits-list li:last-child {
+  margin-bottom: 0;
+}
+
+.benefit-icon {
+  font-size: 1.2rem;
+  color: var(--color-coltefinanciera-green);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.benefits-list li span:not(.benefit-icon) {
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+  line-height: 1.5;
+  font-weight: var(--font-weight-medium);
+}
+
+/* Responsive para información regulatoria */
+@media (max-width: 768px) {
+  .regulatory-update {
+    margin-top: var(--content-spacing-xl);
+  }
+
+  .update-header {
+    padding: var(--content-spacing-md);
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-12);
+  }
+
+  .update-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+
+  .update-header h3 {
+    font-size: var(--font-size-xl);
+  }
+
+  .update-content {
+    padding: var(--content-spacing-lg);
+  }
+
+  .notice-badge {
+    font-size: var(--font-size-sm);
+    padding: var(--space-10) var(--space-16);
+  }
+
+  .notice-description {
+    font-size: var(--font-size-md);
+  }
+
+  .benefits-list li {
+    padding: var(--space-12);
   }
 }
